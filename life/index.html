@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="resources/js/json-sans-eval.js"></script>
+    <script src="resources/js/game-of-life-v3.1.1.js"></script>
+     <link rel="stylesheet" href="resources/fonts/fonts.css" />
+      <script src="resources/js/jquery.js"></script>
+    <meta charset="utf-8" />
+
+    <title>life</title>
+      
+    <script>
+    if ($('#canvas').width) {
+        function resizeCanvasJQuery() {
+            $( "#canvas" ).attr( "height", "0px" );
+            height = $( window ).height();
+            $( "#body" ).css( "height", height );
+            $( "#canvas" ).attr( "height", height );
+            delete height;
+            $( "#canvas" ).attr( "width", "0px" );
+            width = $( window ).width();
+            $( "#canvas" ).attr( "width", width );
+            delete width;
+        };
+
+        var resizeTimer;
+        $(window).resize(function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(resizeCanvasJQuery, 100);
+        });
+
+        $(function(){
+           resizeCanvasJQuery();
+        });
+    }
+    </script>
+    <style>
+        body {
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: center;
+            background-color: #1c1c1c;
+            margin: 0;
+            padding: 0;
+        }
+        #generation {
+            color: red;
+            font-family: bold, sans-serif;
+            z-index: 501;
+            display: block !important;
+            font-size: 11em;
+             -webkit-touch-callout: none; /* iOS Safari */
+          -webkit-user-select: none;   /* Chrome/Safari/Opera */
+          -khtml-user-select: none;    /* Konqueror */
+          -moz-user-select: none;      /* Firefox */
+          -ms-user-select: none;       /* Internet Explorer/Edge */
+          user-select: none;
+          cursor: default;
+        }
+        #SUBTITLE {
+            margin-top: -25px;
+            color: red;
+            font-family: bold, sans-serif;
+            z-index: 501;
+            display: block !important;
+            font-size: 1em;
+             -webkit-touch-callout: none; /* iOS Safari */
+          -webkit-user-select: none;   /* Chrome/Safari/Opera */
+          -khtml-user-select: none;    /* Konqueror */
+          -moz-user-select: none;      /* Firefox */
+          -ms-user-select: none;       /* Internet Explorer/Edge */
+          user-select: none;
+          cursor: default;
+        }
+        canvas {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            z-index: 500;
+            display: block !important;
+            margin: 0;
+            padding: 0;
+        }
+        body * {
+            display: none;
+        }
+    </style>
+  </head>
+  <body id="body">
+      <noscript>You need javascript to be alive</noscript>
+      <span id="generation"></span>
+      <span id="SUBTITLE">Press R key</span>
+      <canvas id="canvas" width="901" height="433"></canvas>
+      
+      
+      <abbr title="Number of live cells">Live cells</abbr><span id="livecells"></span><abbr title="Execution times: Algorithm / Canvas (Algorithm / Canvas Averages)">Step time</abbr><span id="steptime"></span>
+
+        <span id="hint">Hint: hit the <strong>Play</strong> button!</span>
+
+      <div class="box controls">
+        <div class="subtitle">Controls</div>
+        <form action="">
+          <input type="button" value="Run" id="buttonRun" title="Key: R" />
+          <input type="button" value="Step" id="buttonStep" title="Key: S" />
+          <input type="button" value="Clear" id="buttonClear" title="Key: C" />
+          <input type="button" value="Export" id="buttonExport" />
+          <span id="exportUrl"><a id="exportUrlLink">Link</a><a id="exportTinyUrlLink" title="Tiny URL">Create micro URL</a></span>
+        </form>
+      </div>
+
+      <div class="box layout">
+        <form>
+         <input type="button" id="buttonTrail" value="Trail"/>
+         <input type="button" id="buttonGrid" value="Grid" />
+         <input type="button" id="buttonColors" value="Colors" />
+         <span id="layoutMessages"></span>
+        </form>
+      </div>
+
+      <div class="box patterns">
+        <div class="subtitle">Patterns</div>
+        <div class="button"></div>
+        <!-- <div class="button"><a href="" title="">Oscillators</a></div> -->
+        <div class="button"></div>
+        <!-- <div class="button"><a href="" title="">Guns</a></div> -->
+        <div class="button">></div>
+        <div class="button"></div>
+        <div class="cl">&nbsp;</div>
+      </div>
+
+      <div class="box patterns">
+        <div class="subtitle">Benchmarks (heavy patterns / experimental)</div>
+        <div class="button">Benchmark #1</div>
+        <div class="button"></div>
+        <div class="cl">&nbsp;</div>
+      </div>
+  </body>
+</html>

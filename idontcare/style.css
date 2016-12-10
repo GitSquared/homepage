@@ -1,0 +1,21 @@
+html, body {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+section {
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    background: url('res/2.gif') no-repeat center center fixed;
+    background-color: black;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+}
