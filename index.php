@@ -162,12 +162,17 @@
         <section id="contact">
             <div id="bottom_decoration" class="flex-column">
                 <?php
-                    if (!empty($_POST['email']) && !empty($_POST['message'])) {
-                        echo 'proceed';
-                    } else {
-                        echo 'display form';
-                    }
-                ?>
+                    if (!empty($_POST['email']) && !empty($_POST['message']) && filter_var($POST['email'], FILTER_VALIDATE_EMAIL)) {
+                        $email = 'square@ornenet.fr';
+                        $to = $email;
+                        $subject = $_POST['header'];
+                        $message = 'Message from square.codebrew.fr : <br /><br />' . $_POST['message'];
+                        $headers = "MIME-Version: 1.0" . "\r\n";
+                        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+                        $headers .= 'From: ' . $POST['name'] . ' <' . $POST['email'] . '>' . "\r\n";
+                        mail($to, $subject, $message, $headers);
+                        echo '<h1>Thank you!</h1>';
+                    } else { ?>
                 <form method="post" action="#contact" class="flex-column">
                     <h1>Drop me a mail!</h1>
                     <input type="text" name="name" placeholder="Your name" />
@@ -175,6 +180,7 @@
                     <textarea name="message" placeholder="Hello!" spellcheck="true" required></textarea>
                     <input type="submit" value="Send!" />
                 </form>
+                <?php } ?>
             </div>
             <footer>
                 <p>© 2015-<?php print(date("Y")); ?>. All rights reserved.</p>
