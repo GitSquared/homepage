@@ -148,7 +148,7 @@
         </section>
         <section class="project" id="project_4">
             <article class="flex-column">
-                <h1><codebrew/></h1>
+                <h1>&lt;codebrew/&gt;</h1>
                 <p>
                     Codebrew began as a "random stuff online box" where I used to test websites concepts and some friends uploaded memes. Later, the need for a real hosting space of our own was felt, and we eventually found codebrew was a cool name. We provide free web hosting for students, and random memes repositories.
                 </p>
