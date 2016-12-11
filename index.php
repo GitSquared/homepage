@@ -162,6 +162,11 @@
         <section id="contact">
             <div id="bottom_decoration" class="flex-column">
                 <?php
+                    if (isset($_POST)) {
+                        foreach ($_POST as $key => $value) {
+                            $key = htmlspecialchars($value);
+                        }
+                    }
                     if (!empty($_POST['email']) && !empty($_POST['message']) && filter_var($POST['email'], FILTER_VALIDATE_EMAIL)) {
                         $email = 'square@ornenet.fr';
                         $to = $email;
