@@ -161,6 +161,13 @@
         </section>
         <section id="contact">
             <div id="bottom_decoration" class="flex-column">
+                <?php
+                    elseif (empty($_POST['email']) && empty($_POST['message'])) {
+                        echo 'proceed';
+                    } else {
+                        echo 'display form';
+                    }
+                ?>
                 <form method="post" action="#contact" class="flex-column">
                     <h1>Drop me a mail!</h1>
                     <input type="text" name="name" placeholder="Your name" />
