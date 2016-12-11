@@ -162,7 +162,7 @@
         <section id="contact">
             <div id="bottom_decoration" class="flex-column">
                 <?php
-                    elseif (empty($_POST['email']) && empty($_POST['message'])) {
+                    if (!empty($_POST['email']) && !empty($_POST['message'])) {
                         echo 'proceed';
                     } else {
                         echo 'display form';
