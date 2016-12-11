@@ -122,9 +122,9 @@
         </section>
         <section class="project" id="project_2">
             <article class="flex-column">
-                <h1>Work</h1>
+                <h1>I don't care.</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    I don't care. In fact, no one does. Use this page to tell people that you are not interested, with a universal language: GIFs.
                 </p>
                 <div>
                     <a class="hozscroll" href="#middle">Go back</a>
@@ -135,9 +135,9 @@
         </section>
         <section class="project" id="project_3">
             <article class="flex-column">
-                <h1>Work</h1>
+                <h1>/life</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    You want to impress people with a computer screen that looks like you're controlling an army of bacterias? You just want to have "fun" watching life cells? With /life, never choose again: you can do BOTH in one beautifully designed Game Of Life spanning all accross your screen. Tips: Use the R key to play/pause the algorithm, and change cells state with your mouse.
                 </p>
                 <div>
                     <a class="hozscroll" href="#middle">Go back</a>
@@ -148,9 +148,9 @@
         </section>
         <section class="project" id="project_4">
             <article class="flex-column">
-                <h1>Work</h1>
+                <h1><codebrew/></h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Codebrew began as a "random stuff online box" where I used to test websites concepts and some friends uploaded memes. Later, the need for a real hosting space of our own was felt, and we eventually found codebrew was a cool name. We provide free web hosting for students, and random memes repositories.
                 </p>
                 <div>
                     <a class="hozscroll" href="#middle">Go back</a>
