@@ -536,6 +536,7 @@ footer {
     padding-bottom: 1%;
     position: absolute;
     bottom: -200%;
+    left: 0px;
     z-index: 10;
 }
 footer p {
