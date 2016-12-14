@@ -457,7 +457,6 @@ section#contact {
 }
 
 #bottom_decoration input:focus, #bottom_decoration textarea:focus {
-    background-image: none !important;
     border-bottom: 4px solid #cecece !important;
 }
 
