@@ -2,10 +2,10 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="resources/css/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" href="resources/fonts/fonts.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1, height=device-height" />
-
+        <link rel="stylesheet" href="resources/css/main.css">
+        <link rel="stylesheet" media="only all and (orientation: landscape) and (min-width: 750px)" href="resources/css/normal.css">
         <link rel="icon" type="image/png" href="resources/pics/favicon.png" />
         <!--[if IE]><link rel="shortcut icon" type="image/png" href="resources/pics/favicon.png" /><![endif]-->
 
@@ -195,7 +195,7 @@
             </div>
             <div id="bottom_cache"></div>
             <footer>
-                <p>© 2015-<?php print(date("Y")); ?> Me. <a href="#top" class="scroll" style="color:#c63030;">Go up!</a></p>
+                <p>© 2015-<?php print(date("Y")); ?> Me. <a href="LICENSE">See license file</a>  <a href="#top" class="scroll" style="color:#c63030;">Go up!</a></p>
             </footer>
         </section>
     </body>
