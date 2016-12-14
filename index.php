@@ -64,12 +64,14 @@
             });
         </script>
 
-        <title>Hello. I'm a title.</title>
+        <title>Hi! I make websites.</title>
     </head>
     <body>
         <section id="top" class="flex-column">
             <div id="top_decoration"></div>
-            <img id="top_photo" src="resources/pics/me.jpg" alt="That's me" />
+            <div id="top_wrapper" class="flex-column">
+                <img id="top_photo" src="resources/pics/logo.svg" alt="That's me" />
+            </div>
             <h1>Hi! I make<br><strong>websites.</strong></h1>
             <p>
                 Web applications, cool designs, nice animations. And a lot of unuseful random stuff too. <a class="scroll" href="#middle"><strong>Check it out!</strong></a>  (warranty void if used - keep away from fire - copyright lololol - maximum temperature 152 K - products not included.)
@@ -159,7 +161,11 @@
             </article>
             <div></div>
         </section>
-        <section id="contact">
+        <section id="contact" class="flex-column">
+            <a target="_blank" href="https://github.com/GitSquared/homepage" id="bottom_github">
+                <img src="resources/pics/GitHub.png" alt="GitHub" /><br />
+                <h4>See this page on <strong style="color:white;">GitHub</strong>!</h4>
+            </a>
             <div id="bottom_decoration" class="flex-column">
                 <?php
                     if (isset($_POST)) {
@@ -187,8 +193,9 @@
                 </form>
                 '; } ?>
             </div>
+            <div id="bottom_cache"></div>
             <footer>
-                <p>© 2015-<?php print(date("Y")); ?>. All rights reserved.</p>
+                <p>© 2015-<?php print(date("Y")); ?> Me. <a href="#top" class="scroll" style="color:#c63030;">Go up!</a></p>
             </footer>
         </section>
     </body>

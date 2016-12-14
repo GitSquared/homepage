@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="287mm" width="287mm" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1018.2338 1018.2338" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<defs>
+<linearGradient id="a" y2="834" gradientUnits="userSpaceOnUse" y1="350" x2="1.09e3" x1="-7.06">
+<stop stop-opacity=".443" offset="0"/>
+<stop stop-color="#fff" stop-opacity="0" offset="1"/>
+</linearGradient>
+<clipPath id="d" clipPathUnits="userSpaceOnUse">
+<circle cy="526" cx="372" r="509" fill="#f30000"/>
+</clipPath>
+<clipPath id="c" clipPathUnits="userSpaceOnUse">
+<circle cy="509" cx="509" r="509" fill="#f30000"/>
+</clipPath>
+<clipPath id="b" clipPathUnits="userSpaceOnUse">
+<circle cy="526" cx="372" r="509" fill="#f30000"/>
+</clipPath>
+</defs>
+<g transform="translate(137 -17.1)">
+<circle clip-path="url(#b)" cx="372" cy="526" r="509" fill="#ffffff"/>
+<path d="m599 223-98.6 182 188 204-72.4 265-286-66.4 620 619-0.273 0.426-0.0625 0.232-0.0606 0.228h-0.002l0.629 0.168 0.451-0.504-0.314-0.084h-0.002l1.14-0.842-0.828 0.926 311-612-4.36-1.15 1.28-1.94 89.7-144-707-473zm351 1.2e3 -0.369 0.414h0.002z" clip-path="url(#c)" transform="translate(-137 17.1)" fill="url(#a)"/>
+<path d="m361 635 0.113-0.129-171-192-0.135-0.256 0.167-0.112 0.167-0.112 171 192-0.035 0.368-0.0351 0.368-168 189 289 77.4s-83.9-187-120-266zm6.85-216 137-207-236-62.2-77.8 293 171 193 120 265 72.8-272-0.0594 0.197z" clip-path="url(#d)" fill="#c63030"/>
+</g>
+</svg>

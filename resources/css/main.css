@@ -91,17 +91,21 @@ section#top {
     100% {height: 115%;}
 }
 
+#top_wrapper {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 97%;
+    width: 50%;
+    z-index: 3;
+}
+
 #top_photo {
     border-radius: 100%;
-    position: absolute;
-    top: calc(45% - 127px);
-    bottom: calc(55% - 127px);
     margin: 0px;
     padding: 0px;
-    left: calc(22% - 127px);
-    right: calc(78% - 127px);
-    z-index: 3;
-    border: 4px solid #cecece;
+    border: none;
+    width: 40%;
     opacity: 0;
     animation-name: top_photo_load;
     animation-fill-mode: forwards;
@@ -411,6 +415,11 @@ section#project_4 > div {
 
 /* Contact and footer */
 
+section#contact {
+    width: 60%;
+    background-color: #852B2B;
+}
+
 #bottom_decoration {
     height: 115%;
     z-index: 5;
@@ -430,7 +439,9 @@ section#project_4 > div {
 #bottom_decoration form {
     justify-content: space-around;
     height: 50%;
-    width: 50%;
+    width: 60%;
+    padding-left: 25%;
+    padding-top: 8%;
 }
 
 #bottom_decoration input, #bottom_decoration textarea {
@@ -440,7 +451,7 @@ section#project_4 > div {
     padding: 2%;
     font-family: ralewayregular;
     font-size: 2.1vh;
-    border-radius: 3px;
+    border-radius: 3px !important;
     box-shadow: none;
     transition: all .5s ease-out;
 }
@@ -487,6 +498,32 @@ section#project_4 > div {
 #bottom_decoration input:last-of-type:hover {
     background-color: white;
     color: black;
+}
+
+#bottom_github {
+    text-align: center;
+    padding-bottom: 10%;
+    padding-right: 40%;
+    font-family: ralewaythin;
+}
+
+#bottom_github img {
+    border-radius: 100%;
+    border: none;
+    transition: all .3s ease-out;
+}
+#bottom_github:hover img {
+    background-color: #5d0000;
+}
+
+#bottom_cache {
+    position: absolute;
+    bottom: -200%;
+    width: 30%;
+    background-color: #f3f3f3;
+    height: 80%;
+    right: 0px;
+    z-index: 4;
 }
 
 footer {
