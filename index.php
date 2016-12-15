@@ -2,10 +2,12 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" href="resources/fonts/fonts.css">
-        <link rel="stylesheet" href="resources/css/main.css">
-        <link rel="stylesheet" media="only all and (orientation: landscape) and (min-width: 750px)" href="resources/css/normal.css">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" href="resources/fonts/fonts.css" />
+        <link rel="stylesheet" href="resources/css/main.css" />
+        <link rel="stylesheet" href="resources/css/fontsize.css" />
+        <link rel="stylesheet" media="only all and (orientation: landscape) and (min-width: 1000px)" href="resources/css/normal.css" />
+        <link rel="stylesheet" media="only all and (max-width: 1000px)" href="resources/css/flowdisplay.css" />
         <link rel="icon" type="image/png" href="resources/pics/favicon.png" />
         <!--[if IE]><link rel="shortcut icon" type="image/png" href="resources/pics/favicon.png" /><![endif]-->
 
@@ -45,14 +47,14 @@
                                   $(document.body)[0].setAttribute("style", "overflow-x:hidden;");
                               }
                               else {
-                                  $(options.scrollTarget)[0].setAttribute("style", "opacity:1;");
+                                  $(options.scrollTarget)[0].setAttribute("style", "opacity:1;display: block;");
                                   $(document.body)[0].setAttribute("style", "overflow:hidden;");
                               }
                           },
                               afterScroll: function(options) {
                                 if (options.scrollTarget == '#middle') {
                                     $( ".project" ).each(function(index, element) {
-                                        element.setAttribute("style", "opacity: 0;");
+                                        element.setAttribute("style", "opacity: 0;display: none;");
                                     });
                                 }
                               }

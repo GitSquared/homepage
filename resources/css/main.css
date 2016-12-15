@@ -23,14 +23,6 @@ body {
     color: white;
 }
 
-h1 {font-size:3vh;font-family: ralewayblack;}
-h2 {font-size:2.6vh;font-family: ralewaythin;}
-h3 {font-size:2.4vh;}
-h4 {font-size:2vh;}
-p  {font-size:2vh;}
-h5 {font-size:1.4vh;}
-h6 {font-size:1vh;}
-
 strong {
     text-decoration: none;
     font-weight: normal;

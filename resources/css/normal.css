@@ -62,7 +62,6 @@ section#top h1 {
     margin-right: 0%;
     margin-bottom: 1.5%;
     opacity: 0;
-    font-size: 8vh;
     z-index: 3;
     animation-name: top_h1_load;
     animation-fill-mode: forwards;
@@ -117,14 +116,13 @@ section#middle {
 
 #middle_decoration h1 {
     transform: skewX(-60deg);
-    font-size: 5vh;
     color: #242424;
 }
 
 #middle_decoration a {
     color: #636363;
     transition: all .3s ease-out;
-    font-size: 3vh !important;
+    font-size: 0.7em !important;
     font-family: ralewaythin !important;
 }
 
@@ -155,6 +153,10 @@ section#middle article:hover, section#middle article:focus, section#middle artic
 
 #work_3, #work_4 {
     left: 0px;
+}
+
+#work_1 *, #work_2 *, #work_3 *, #work_4 * {
+    margin-top: 2%;
 }
 
 #work_1 {
@@ -226,11 +228,13 @@ section.project {
     top: 100%;
     left: 100%;
     opacity: 0;
+    display: none;
 }
 
 /* In case user disabled Javascript */
 section.project:target {
     opacity: 1;
+    display: block;
 }
 
 section.project article {
@@ -267,11 +271,11 @@ section.project article * {
 
 section.project article h1 {
     color: black;
-    font-size: 5vh;
+    font-size: 3em;
 }
 
 section.project article p, section.project article a {
-    font-size: 2.3vh;
+    font-size: 1.4em;
 }
 
 section.project article div {
@@ -387,7 +391,7 @@ section#contact {
     width: 100%;
     padding: 2%;
     font-family: ralewayregular;
-    font-size: 2.1vh;
+    font-size: 1.4em;
     border-radius: 3px !important;
     box-shadow: none;
     transition: all .5s ease-out;
@@ -420,7 +424,6 @@ section#contact {
 #bottom_decoration textarea {
     height: 30% !important;
     width: 100% !important;
-    font-size: 1.9vh;
 }
 
 #bottom_decoration input:last-of-type {
@@ -475,6 +478,7 @@ footer {
     left: 0px;
     z-index: 10;
 }
+
 footer p {
     margin: 0px;
 }

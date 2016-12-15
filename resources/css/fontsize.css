@@ -1,0 +1,23 @@
+@media only all and (min-width: 1200px) {
+    h1 {font-size:2.4em;font-family: ralewayblack;}
+    h2 {font-size:2em;font-family: ralewaythin;}
+    h3 {font-size:1.6em;}
+    h4 {font-size:1.4em;}
+    p  {font-size:1.2em;}
+    h5 {font-size:0.6em;}
+    h6 {font-size:0.4em;}
+
+    section#top h1 {font-size: 5em;}
+}
+
+@media only all and (max-width: 1200px) {
+    h1 {font-size:2em;font-family: ralewayblack;}
+    h2 {font-size:1.6em;font-family: ralewaythin;}
+    h3 {font-size:1.4em;}
+    h4 {font-size:1.2em;}
+    p  {font-size:1.2em;}
+    h5 {font-size:0.4em;}
+    h6 {font-size:0.2em;}
+
+    section#top h1 {font-size: 3.5em;}
+}
