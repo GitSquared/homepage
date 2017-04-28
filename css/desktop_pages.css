@@ -1,0 +1,129 @@
+@media only all and (min-width: 900px) {
+
+    section {
+        width: 65%;
+        height: 105%;
+        transform: rotate(-4deg) translateZ(.1em) !important;
+        position: relative;
+        top: -6%;
+        left: 100%;
+        padding-top: 5%;
+        background: white;
+    }
+
+    .anchors.section:target + * + section, .anchors.aside:target + section:not(:first-of-type) {
+        left: 32%;
+        transition: left .6s ease-out, filter .1s linear !important;
+    }
+
+    section:first-of-type {
+        z-index: 2;
+        left: -3%;
+    }
+
+    section:not(:first-of-type) {
+        position: absolute;
+        transition: left .6s ease-in, filter .1s linear;
+        left: 120vw;
+        border-right: 60px solid white;
+    }
+
+    .anchors#Page2 + * + section {
+        z-index: 3;
+    }
+
+    .anchors#Page3 + * + section {
+        z-index: 4;
+    }
+
+    section > * {
+        perspective: 1000px; /* Fixes blurry text (triggers GPU acceleration) */
+        transform: rotate(4deg) translateZ(.1em); /* rotation + blurry text */
+    }
+
+    section > article, section > aside {
+        position: fixed;
+        top: 19%;
+        left: 6%;
+        height: 70%;
+        width: 93%;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        border: 5px solid white;
+        box-sizing: border-box;
+    }
+
+    section > article p, section > aside p {
+        margin: 0px;
+        font-size: 1.06em;
+        text-align: justify;
+        white-space: pre-line;
+        overflow-wrap: break-word;
+    }
+
+    section > aside {
+        z-index: -1;
+        background-color: white;
+        opacity: 0;
+        transition: opacity .6s ease-out, z-index .1s linear .6s;
+    }
+
+    .anchors.aside:target + section > aside {
+        opacity: 1;
+        z-index: 99;
+        transition: opacity .6s ease-out;
+    }
+    
+    section header ul {
+        padding: 0px;
+    }
+    
+    section header div {
+        position: fixed;
+        right: 5px;
+        padding-right: 50px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity .6s ease-out, z-index .1s linear .6s;
+    }
+
+    section:not(:first-of-type) header div {
+        top: 0px;
+    }
+    
+    section header div nav {
+        position: fixed;
+        left: 0px;
+        padding-left: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    section header div nav img {
+        transform: rotate(180deg);
+    }
+
+    .anchors.aside:target + section header div {
+        opacity: 1;
+        z-index: 99;
+        transition: opacity .6s ease-out;
+    }
+    
+    .anchors.aside:target + section header > *:not(div) {
+        opacity: 0;
+        transition: opacity .6s ease-out;
+    }
+    
+    section header.alternative {
+        display: none;
+    }
+    
+}

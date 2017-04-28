@@ -1,0 +1,68 @@
+div#info-box {
+    position: fixed;
+    z-index: 999;
+    right: 49px;
+    bottom: 82px;
+    max-width: 400px;
+    max-height: 0px;
+    text-align: justify;
+    background-color: #577a92;
+    font-weight: 500;
+    color: white;
+    border-radius: 7px;
+    border-bottom-right-radius: 0px;
+    overflow: hidden;
+    padding: 0px;
+    opacity: 0;
+    transition: all .5s ease-out;
+}
+
+div#info-box a {
+    color: white;
+    text-decoration: underline;
+}
+
+div#info-box::after {
+    content: "";
+    position: fixed;
+    bottom: 52px;
+    right: 49px;
+    background-color: transparent;
+    width: 0px;
+    height: 0px;
+    border: 15px solid #577a92;
+    border-left: 35px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 15px solid transparent;
+}
+
+img#info {
+    position: fixed;
+    z-index: 999;
+    right: 35px;
+    bottom: 35px;
+    width: 30px;
+    padding: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+img#info:hover + div#info-box, div#info-box:hover {
+    padding: 20px;
+    max-height: 100vh;
+    opacity: 1;
+}
+
+img#info + div + aside, img#info + div + aside + div + section {
+    transition: filter .1s linear;
+}
+
+/* those selectors... **triggered** */
+img#info + div + aside, img#info + div + aside + div + section, img#info + div + aside + div + section + div + div + section, img#info + div + aside + div + section + div + div + section + div + div + section {
+    filter: blur(-1px);
+    transform: translateZ(.1em);
+}
+
+img#info:hover + div + aside, img#info:hover + div + aside + div + section, img#info:hover + div + aside + div + section + div + div + section, img#info:hover + div + aside + div + section + div + div + section + div + div + section, div#info-box:hover + aside, div#info-box:hover + aside + div + section, div#info-box:hover + aside + section + div + div + section, div#info-box:hover + aside + div + section + div + div + section + div + div + section {
+    filter: blur(3.5px);
+}

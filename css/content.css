@@ -1,0 +1,15 @@
+section article p, section aside p {
+    padding-right: 10px;
+}
+
+section article h1, section aside h1 {
+    font-size: 2em;
+}
+
+section article > ul li, section aside > ul li {
+    display: block;
+}
+
+section article > ul li > *:not(h3), section aside > ul li > *:not(h3) {
+    margin-left: 20px;
+}
