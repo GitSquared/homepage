@@ -47,6 +47,14 @@
                         break;
                 }
             }
+
+            let preventArrowKeyScroll = (e) => {
+                console.log(e);
+              if (e.keyCode == 37 || e.keyCode == 38 || e.keyCode == 39 || e.keyCode == 40 || e.keyCode == 9) {
+                  e.preventDefault();
+              }
+            }
+            document.addEventListener("keydown", preventArrowKeyScroll, false);
         </script>
 
         <!-- Title -->
