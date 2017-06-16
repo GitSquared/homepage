@@ -58,11 +58,11 @@ img#info + div + aside, img#info + div + aside + div + section {
 }
 
 /* those selectors... **triggered** */
-img#info + div + aside, img#info + div + aside + div + section, img#info + div + aside + div + section + div + div + section, img#info + div + aside + div + section + div + div + section + div + div + section {
+img#info + div + aside, img#info + div + aside + div + div + section, img#info + div + aside + div + div + section + div + div + section, img#info + div + aside + div + div + section + div + div + section + div + div + section {
     filter: blur(-1px);
     transform: translateZ(.1em);
 }
 
-img#info:hover + div + aside, img#info:hover + div + aside + div + section, img#info:hover + div + aside + div + section + div + div + section, img#info:hover + div + aside + div + section + div + div + section + div + div + section, div#info-box:hover + aside, div#info-box:hover + aside + div + section, div#info-box:hover + aside + section + div + div + section, div#info-box:hover + aside + div + section + div + div + section + div + div + section {
+img#info:hover + div + aside, img#info:hover + div + aside + div + div + section, img#info:hover + div + aside + div + div + section + div + div + section, img#info:hover + div + aside + div + div + section + div + div + section + div + div + section, div#info-box:hover + aside, div#info-box:hover + aside + div + div + section, div#info-box:hover+ aside + div + div + section + div + div + section, div#info-box:hover + aside + div + div + section + div + div + section + div + div + section {
     filter: blur(3.5px);
 }

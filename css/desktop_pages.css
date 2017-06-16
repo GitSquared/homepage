@@ -1,5 +1,10 @@
 @media only all and (min-width: 900px) {
-
+    
+    body > aside {
+        position: fixed;
+        left: 0px;
+    }
+    
     section {
         width: 65%;
         height: 105%;
@@ -11,17 +16,16 @@
         background: white;
     }
 
-    .anchors.section:target + * + section, .anchors.aside:target + section:not(:first-of-type) {
+    .anchors.section:target + * + section, .anchors.aside:target + section {
         left: 32%;
         transition: left .6s ease-out, filter .1s linear !important;
     }
 
     section:first-of-type {
         z-index: 2;
-        left: -3%;
     }
 
-    section:not(:first-of-type) {
+    section {
         position: absolute;
         transition: left .6s ease-in, filter .1s linear;
         left: 120vw;
@@ -93,7 +97,7 @@
         transition: opacity .6s ease-out, z-index .1s linear .6s;
     }
 
-    section:not(:first-of-type) header div {
+    section header div {
         top: 0px;
     }
     

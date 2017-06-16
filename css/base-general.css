@@ -169,6 +169,7 @@ section nav {
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
+    top: 30px;
 }
 
 section header nav ul {
