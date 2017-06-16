@@ -30,6 +30,7 @@
     body > aside div {
         text-align: center;
         align-items: center;
+        margin-top: 10px;
     }
     
     body > aside div img {
