@@ -48,13 +48,84 @@
                 }
             }
 
-            let preventArrowKeyScroll = (e) => {
-                console.log(e);
-              if (e.keyCode == 37 || e.keyCode == 38 || e.keyCode == 39 || e.keyCode == 40 || e.keyCode == 9) {
-                  e.preventDefault();
-              }
+            let customArrowKeyScroll = (e) => {
+                if (e.keyCode == 37 || e.keyCode == 38 || e.keyCode == 39 || e.keyCode == 40 || e.keyCode == 9) {
+                    e.preventDefault();
+                }
+                if (e.keyCode == 39) {
+                    switch(window.location.hash) {
+                        case "#Page1":
+                            window.location.hash = "#Aside1";
+                            break;
+                        case "#Aside1":
+                            break;
+                        case "#Page2":
+                            window.location.hash = "#Aside2";
+                            break;
+                        case "#Aside2":
+                            break;
+                        case "#Page3":
+                            break;
+                        default:
+                            window.location.hash = "#Aside1";
+                            break;
+                    }
+                }
+                if (e.keyCode == 37) {
+                    switch(window.location.hash) {
+                        case "#Aside1":
+                            window.location.hash = "#Page1";
+                            break;
+                        case "#Aside2":
+                            window.location.hash = "#Page2";
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                if (e.keyCode == 40) {
+                    switch(window.location.hash) {
+                        case "#Page1":
+                            window.location.hash = "#Page2";
+                            break;
+                        case "#Aside1":
+                            window.location.hash = "#Page2";
+                            break;
+                        case "#Page2":
+                            window.location.hash = "#Page3";
+                            break;
+                        case "#Aside2":
+                            window.location.hash = "#Page3";
+                            break;
+                        case "#Page3":
+                            break;
+                        default:
+                            window.location.hash = "#Page2";
+                            break;
+                    }
+                }
+                if (e.keyCode == 38) {
+                    switch(window.location.hash) {
+                        case "#Page1":
+                            break;
+                        case "#Aside1":
+                            window.location.hash = "#Page1";
+                            break;
+                        case "#Page2":
+                            window.location.hash = "#Page1";
+                            break;
+                        case "#Aside2":
+                            window.location.hash = "#Page2";
+                            break;
+                        case "#Page3":
+                            window.location.hash = "#Page2";
+                            break;
+                        default:
+                            break;
+                    }
+                }
             }
-            document.addEventListener("keydown", preventArrowKeyScroll, false);
+            document.addEventListener("keydown", customArrowKeyScroll, false);
         </script>
 
         <!-- Title -->
