@@ -34,16 +34,27 @@
                     document.getElementsByClassName('active')[0].setAttribute('class', '');
                 }
                 switch(window.location.hash) {
+                    case "#Page1":
+                    case "#Aside1":
+                        document.getElementById('desktopLink1').setAttribute('class', 'active');
+                        document.getElementById('aside').setAttribute('class', '');
+                        document.getElementById('aside-background').setAttribute('style', 'transition: all .7s ease-out .7s');
+                        break;
                     case "#Page2":
                     case "#Aside2":
                         document.getElementById('desktopLink2').setAttribute('class', 'active');
+                        document.getElementById('aside').setAttribute('class', '');
+                        document.getElementById('aside-background').setAttribute('style', 'transition: all .7s ease-out .7s');
                         break;
                     case "#Page3":
                     case "#Aside3":
                         document.getElementById('desktopLink3').setAttribute('class', 'active');
+                        document.getElementById('aside').setAttribute('class', '');
+                        document.getElementById('aside-background').setAttribute('style', 'transition: all .7s ease-out .7s');
                         break;
                     default:
-                        document.getElementById('desktopLink1').setAttribute('class', 'active');
+                        document.getElementById('aside').setAttribute('class', 'landing-page');
+                        document.getElementById('aside-background').setAttribute('style', 'width: 100vw;');
                         break;
                 }
             }
@@ -135,7 +146,8 @@
         <div id="aside-background"></div>
         <img id="info" alt="Info" src="assets/info.svg" />
         <div id="info-box">Special mention to <a href="http://eduardstefan.com" target="_blank">Eduard Stefan</a> for the original design concept of this website. Check out his stuff!</div>
-        <aside>
+        <aside id="aside" class="landing-page">
+            <h1 id="aside-landing-title" style="display: none">Squared²</h1>
             <div>
                 <img alt="Logo" src="assets/logo.svg" />
                 <h1>Gaby<br />

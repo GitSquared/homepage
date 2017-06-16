@@ -4,6 +4,99 @@
         position: fixed;
         left: 0px;
         background: none;
+        transition: all .7s ease-out !important;
+    }
+    
+    body > aside > * {
+        transition: all .7s ease-out;
+    }
+    
+    body > aside.landing-page {
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+        animation-name: landing-appear;
+        animation-duration: 1.5s;
+        animation-delay: 0.7s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+    
+    @keyframes landing-appear {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    #aside.landing-page > h1 {
+        display: block !important;
+        color: white;
+        position: fixed;
+        top: 43vh;
+        left: 45vw;
+        text-align: center;
+        padding: 0px;
+        font-size: 40px;
+    }
+    
+    #aside.landing-page > nav {
+        text-align: center;
+        padding: 0px;
+        margin: 0px;
+        animation-name: landing-nav-appear;
+        animation-delay: 0.8s;
+        animation-duration: 1.8s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        margin-bottom: 0px;
+    }
+    
+    @keyframes landing-nav-appear {
+        0% {
+            margin-bottom: 0px;
+        }
+        100% {
+            margin-bottom: 30px;
+        }
+    }
+    
+    #aside.landing-page > nav > ul {
+        padding: 0px;
+    }
+    
+    #aside.landing-page p {
+        padding-left: 0px;
+    }
+    
+    #aside.landing-page > div {
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+        padding-top: 0px;
+        margin: auto;
+        margin-top: 20vh;
+    }
+    
+    #aside.landing-page > div > img {
+        width: 150px;
+        margin-bottom: -50px;
+        transform: rotateZ(-29deg);
+        margin-left: 20px;
+    }
+    
+    #aside.landing-page > div > h1 {
+        opacity: 0;
+        height: 0px;
+        width: 0px;
+    }
+    
+    #aside.landing-page > div > h3 {
+        margin-top: 200px;
     }
     
     body > aside::after {
@@ -17,9 +110,13 @@
         z-index: -1;
     }
     
+    body > aside.landing-page::after {
+        width: 100vw;
+    }
+    
     #aside-background {
         width: 90vw;
-        
+        transition: all .7s ease-out;
     }
     
     section {
