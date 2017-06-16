@@ -5,6 +5,11 @@
         left: 0px;
     }
     
+    #aside-background {
+        width: 90vw;
+        
+    }
+    
     section {
         width: 65%;
         height: 105%;
