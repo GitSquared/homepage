@@ -3,6 +3,18 @@
     body > aside {
         position: fixed;
         left: 0px;
+        background: none;
+    }
+    
+    body > aside::after {
+        content: "";
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(131, 131, 131, 0.15);
+        z-index: -1;
     }
     
     #aside-background {
