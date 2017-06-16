@@ -19,6 +19,7 @@
         width: 100%;
         height: auto;
         padding-bottom: 45px;
+        padding-top: 50px;
         align-items: center;
         padding-right: 0px;
     }
@@ -30,11 +31,6 @@
     body > aside div {
         text-align: center;
         align-items: center;
-        margin-top: 10px;
-    }
-    
-    body > aside div img {
-        margin-top: 15px;
     }
     
     img#info, div#info-box,div#info-box::after, body > aside nav {
@@ -85,6 +81,10 @@
         padding-left: 15px;
         padding-right: 15px;
         padding-bottom: 2px;
+    }
+    
+    section article ul, section aside ul {
+        padding: 0px;
     }
     
     section p {
