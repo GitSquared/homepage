@@ -10,27 +10,31 @@
         <link rel="icon" href="assets/favicon.png"/>
         <link rel="stylesheet" href="index.css"/>
         
-         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha384-V27yAyb3yYhZbiwaK9Sgxh9Cywkf/H2al4wcrcp/hKF9ZYT7d5saGJFoO/0v1Cgs" crossorigin="anonymous"></script>
     </head>
     <body>
         <section>
-            <aside>
+            <aside class="wow fadeInDown" data-wow-delay=".5s">
                 <img src="assets/avatar.png" alt="Avatar"/>
             </aside>
-            <article>
+            <article class="wow fadeInRight">
                 <h1>Hi!<br/>I'm Gaby, a.k.a Squared.</h1>
                 <p>
                     <strong>I code and design stuff</strong>, mostly web-related. I'm passionate about cybersecurity, rock music, UX design... When I'm not on a computer, I sail the seven seas blowing guitar rhythms in the wind. I'm the hosting provider and system administrator @ <a href="https://codebrew.fr/">codebrew</a>.
                 </p>
-                <nav>
-                <a href="mailto:squared@codebrew.fr"><img src="assets/email.svg" alt="Email"/></a>
-                <a href="https://github.com/GitSquared"><img src="assets/github.svg" alt="GitHub"/></a>
-                <a href="https://gitlab.com/GitSquared"><img src="assets/gitlab.svg" alt="GitLab"/></a>
-                <a href="" onclick="alert('squared²#9171');"><img src="assets/discord.svg" alt="Discord"/></a>
-            </nav>
+                <nav class="wow fadeInUp" data-wow-delay=".5s">
+                    <a href="mailto:squared@codebrew.fr"><img src="assets/email.svg" alt="Email"/></a>
+                    <a href="https://github.com/GitSquared"><img src="assets/github.svg" alt="GitHub"/></a>
+                    <a href="https://gitlab.com/GitSquared"><img src="assets/gitlab.svg" alt="GitLab"/></a>
+                    <a href="" onclick="alert('squared²#9171');"><img src="assets/discord.svg" alt="Discord"/></a>
+                </nav>
             </article>
         </section>
         <script>
+            new WOW().init();
+            
             function resizeElements() {                
                 if (window.innerWidth > window.innerHeight) {
                     var paragraph = document.querySelector("p");

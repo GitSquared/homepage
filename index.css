@@ -11,6 +11,7 @@ body {
     background-size: cover;
     color: white;
     display: flex;
+    overflow-x: hidden;
 }
 
 ::selection {
@@ -21,6 +22,10 @@ body {
 ::-moz-selection {
     color: orange;
     background: white;
+}
+
+.wow {
+    visibility: hidden;
 }
 
 section {
