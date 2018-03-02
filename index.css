@@ -1,0 +1,153 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+
+}
+
+body {
+    background-image: linear-gradient(to right top, #e65c00 0%, #f9d423 85%);
+    background-size: cover;
+    color: white;
+    display: flex;
+}
+
+::selection {
+    color: orange;
+    background: white;
+}
+
+::-moz-selection {
+    color: orange;
+    background: white;
+}
+
+section {
+    border: none;
+    padding: 25px 0px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+aside {
+    overflow: hidden;
+    margin-right: -15px;
+}
+
+aside > img {
+    height: 100%;
+}
+
+article {
+    padding-left: 30px;
+    border-left: 5px solid white;
+}
+
+article h1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 5vmin;
+    margin: 0px;
+    margin-bottom: 20px;
+}
+
+article p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 2.5vmin;
+    text-align: justify;
+    margin: 0px;
+    width: 20px;
+    overflow: hidden;
+}
+
+article strong {
+    font-weight: bold;
+}
+
+p a {
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+    background: transparent;
+    padding: 0px 5px;
+    transition: all .3s ease-out;
+}
+
+p a:hover {
+    background: white;
+    color: orange;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+nav > * {
+    margin: 0px 3vmin;
+}
+
+nav img {
+    height: 5vmin;
+}
+
+nav a {
+    transition: all .3s ease-out;
+    border-bottom: 5px solid transparent;
+}
+
+nav a:hover {
+    border-bottom: 5px solid white;
+}
+
+@media only all and (orientation: portrait), only all and (max-width: 950px) {
+    section {
+        flex-direction: column;
+    }
+    
+    article {
+        border-left: none;
+        padding-left: 0px;
+    }
+    
+    aside {
+        margin-right: 0px;
+        margin-bottom: 30px;
+        height: auto !important;
+    }
+    
+    aside img {
+        max-height: 30vh;
+    }
+    
+    article h1 {
+        text-align: center;
+        font-size: 7vmin;
+    }
+    
+    article p {
+        font-size: 3.8vmin;
+        width: 90%;
+        padding: 0px 5%;
+    }
+    
+    nav {
+        justify-content: space-between;
+        padding: 0px 10%;
+        margin-top: 8vh;
+    }
+    
+    nav img {
+        height: 12vmin;
+    }
+}

@@ -1,207 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- METAs -->
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, height=device-height" />
-
-        <!-- Links -->
-        <link rel="icon" type="image/png" href="assets/favicon.png" />
-        <!--[if IE]><link rel="shortcut icon" type="image/png" href="assets/favicon.png" /><![endif]-->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700" rel="stylesheet" />
-        <link rel="stylesheet" href="css/base-general.css" />
-        <link rel="stylesheet" href="css/content.css" />
-        <link rel="stylesheet" href="css/desktop_pages.css" />
-        <link rel="stylesheet" href="css/media.css" />
-        <link rel="stylesheet" href="css/info-box.css" />
+        <title>Gaby a.k.a Squared</title>
         
-        <!-- A bit of javascript -->
-        <script src="js/webcomponents-hi-ce.js"></script>
-        <script src="js/fetch-polyfill.js"></script>
-        <script>
-            window.customElements.define('get-import', class extends HTMLElement {
-                constructor() {
-                    super();
-                    if (this.hasAttribute('url'))
-                        window.fetch(this.attributes.url.value)
-                                .then(res => res.text())
-                                .then(txt => this.outerHTML = txt);
-                }
-            });
-            
-            let setActiveLink = () => {
-                if (document.getElementsByClassName('active').length > 0) {
-                    document.getElementsByClassName('active')[0].setAttribute('class', '');
-                }
-                switch(window.location.hash) {
-                    case "#Page1":
-                    case "#Aside1":
-                        document.getElementById('desktopLink1').setAttribute('class', 'active');
-                        document.getElementById('aside').setAttribute('class', '');
-                        document.getElementById('aside-background').setAttribute('style', 'transition: all .7s ease-out .7s');
-                        break;
-                    case "#Page2":
-                    case "#Aside2":
-                        document.getElementById('desktopLink2').setAttribute('class', 'active');
-                        document.getElementById('aside').setAttribute('class', '');
-                        document.getElementById('aside-background').setAttribute('style', 'transition: all .7s ease-out .7s');
-                        break;
-                    case "#Page3":
-                    case "#Aside3":
-                        document.getElementById('desktopLink3').setAttribute('class', 'active');
-                        document.getElementById('aside').setAttribute('class', '');
-                        document.getElementById('aside-background').setAttribute('style', 'transition: all .7s ease-out .7s');
-                        break;
-                    default:
-                        document.getElementById('aside').setAttribute('class', 'landing-page');
-                        document.getElementById('aside-background').setAttribute('style', 'width: 100vw;');
-                        break;
-                }
-            }
-
-            let customArrowKeyScroll = (e) => {
-                if (e.keyCode == 37 || e.keyCode == 38 || e.keyCode == 39 || e.keyCode == 40 || e.keyCode == 9) {
-                    e.preventDefault();
-                }
-                if (e.keyCode == 39) {
-                    switch(window.location.hash) {
-                        case "#Page1":
-                            window.location.hash = "#Aside1";
-                            break;
-                        case "#Aside1":
-                            break;
-                        case "#Page2":
-                            window.location.hash = "#Aside2";
-                            break;
-                        case "#Aside2":
-                            break;
-                        case "#Page3":
-                            break;
-                        default:
-                            window.location.hash = "#Aside1";
-                            break;
-                    }
-                }
-                if (e.keyCode == 37) {
-                    switch(window.location.hash) {
-                        case "#Aside1":
-                            window.location.hash = "#Page1";
-                            break;
-                        case "#Aside2":
-                            window.location.hash = "#Page2";
-                            break;
-                        default:
-                            break;
-                    }
-                }
-                if (e.keyCode == 40) {
-                    switch(window.location.hash) {
-                        case "#Page1":
-                            window.location.hash = "#Page2";
-                            break;
-                        case "#Aside1":
-                            window.location.hash = "#Page2";
-                            break;
-                        case "#Page2":
-                            window.location.hash = "#Page3";
-                            break;
-                        case "#Aside2":
-                            window.location.hash = "#Page3";
-                            break;
-                        case "#Page3":
-                            break;
-                        default:
-                            window.location.hash = "#Page2";
-                            break;
-                    }
-                }
-                if (e.keyCode == 38) {
-                    switch(window.location.hash) {
-                        case "#Page1":
-                            break;
-                        case "#Aside1":
-                            window.location.hash = "#Page1";
-                            break;
-                        case "#Page2":
-                            window.location.hash = "#Page1";
-                            break;
-                        case "#Aside2":
-                            window.location.hash = "#Page2";
-                            break;
-                        case "#Page3":
-                            window.location.hash = "#Page2";
-                            break;
-                        default:
-                            break;
-                    }
-                }
-            }
-            document.addEventListener("keydown", customArrowKeyScroll, false);
-        </script>
-
-        <!-- Title -->
-        <title>² - Developer</title>
+        <meta charset="utf-8"/>
+        <meta name="description" content="Name's Gaby. Nickname's Squared. I code & design stuff. Feed me coffee."/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        
+        <link rel="icon" href="assets/favicon.png"/>
+        <link rel="stylesheet" href="index.css"/>
+        
+         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"> 
     </head>
     <body>
-        <div id="aside-background"></div>
-        <img id="info" alt="Info" src="assets/info.svg" />
-        <div id="info-box">Special mention to <a href="http://eduardstefan.com" target="_blank">Eduard Stefan</a> for the original design concept of this website. Check out his stuff!</div>
-        <aside id="aside" class="landing-page">
-            <h1 id="aside-landing-title" style="display: none">Squared²</h1>
-            <div>
-                <img alt="Logo" src="assets/logo.svg" />
-                <h1>Gaby<br />
-                    <em style="font-style:italic;">aka</em><br />
-                    <strong>Squared²</strong>
-                </h1>
-                <h3>Building & breaking things since [ERROR]</h3>
-            </div>
-            <nav>
-                <ul>
-                    <li id="desktopLink1" class="active">
-                        <a href="#Page1">Skills <img alt="arrow" src="assets/arrow.svg" /></a>
-                    </li>
-                    <li id="desktopLink2">
-                        <a href="#Page2">Projects <img alt="arrow" src="assets/arrow.svg" /></a>
-                    </li>
-                    <li id="desktopLink3">
-                        <a href="#Page3">Contact me <img alt="arrow" src="assets/arrow.svg" /></a>
-                    </li>
-                </ul>
+        <section>
+            <aside>
+                <img src="assets/avatar.png" alt="Avatar"/>
+            </aside>
+            <article>
+                <h1>Hi!<br/>I'm Gaby, a.k.a Squared.</h1>
+                <p>
+                    <strong>I code and design stuff</strong>, mostly web-related. I'm passionate about cybersecurity, rock music, UX design... When I'm not on a computer, I sail the seven seas blowing guitar rhythms in the wind. I'm the hosting provider and system administrator @ <a href="https://codebrew.fr/">codebrew</a>.
+                </p>
+                <nav>
+                <a href="mailto:squared@codebrew.fr"><img src="assets/email.svg" alt="Email"/></a>
+                <a href="https://github.com/GitSquared"><img src="assets/github.svg" alt="GitHub"/></a>
+                <a href="https://gitlab.com/GitSquared"><img src="assets/gitlab.svg" alt="GitLab"/></a>
+                <a href="" onclick="alert('squared²#9171');"><img src="assets/discord.svg" alt="Discord"/></a>
             </nav>
-            <p>
-                <a href="https://github.com/GitSquared" target="_blank">
-                    <img alt="Github" src="assets/github.svg" />/GitSquared
-                </a><br />
-                <a href="mailto:work.square@ornenet.fr" target="_blank">
-                    <img alt="E-mail" src="assets/mail.svg" />work.square@ornenet.fr
-                </a><br />
-                <a href="https://discordapp.com" target="_blank">
-                    <img alt="Discord" src="assets/discord.svg" />squared²#9171
-                </a>
-            </p>
-        </aside>
-        <div class="anchors section" id="Page1"></div>
-        <div class="anchors aside" id="Aside1"></div>
-        <section>
-            <get-import url="content/page1.html"></get-import>
-            <get-import url="content/aside1.html"></get-import>
-        </section>
-        <div class="anchors section" id="Page2"></div>
-        <div class="anchors aside" id="Aside2"></div>
-        <section>
-            <get-import url="content/page2.html"></get-import>
-            <get-import url="content/aside2.html"></get-import>
-        </section>
-        <div class="anchors section" id="Page3"></div>
-        <div class="anchors aside" id="Aside3"></div>
-        <section>
-            <get-import url="content/page3.html"></get-import>
-            <get-import url="content/aside3.html"></get-import>
+            </article>
         </section>
         <script>
-            setActiveLink();
-            window.onhashchange = setActiveLink;
+            function resizeElements() {                
+                if (window.innerWidth > window.innerHeight) {
+                    var paragraph = document.querySelector("p");
+                    paragraph.style.width = "0px";
+                    paragraph.style.width = document.querySelector("h1").offsetWidth+"px";
+                    
+                    var aside = document.querySelector("aside");
+                    aside.style.height = "0px";
+                    aside.style.height = document.querySelector("article").offsetHeight+"px";
+                }
+            }
+            
+            window.onresize = () => {
+                resizeElements();
+            };
+            
+            resizeElements();
         </script>
     </body>
 </html>
