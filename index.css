@@ -116,6 +116,10 @@ nav a:hover {
 }
 
 @media only all and (orientation: portrait), only all and (max-width: 950px) {
+    body {
+        background-image: linear-gradient(to right top, #c21500 0%, #ffc500 110%);
+    }
+
     section {
         flex-direction: column;
     }
