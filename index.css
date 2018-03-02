@@ -7,7 +7,7 @@ html, body {
 }
 
 body {
-    background-image: linear-gradient(to right top, #e65c00 0%, #f9d423 85%);
+    background-image: linear-gradient(to right top, #c21500 0%, #ffc500 85%);
     background-size: cover;
     color: white;
     display: flex;
