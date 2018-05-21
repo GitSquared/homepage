@@ -38,7 +38,7 @@ section {
     flex-wrap: wrap;
 }
 
-img[alt="Avatar"] {
+img#avatar {
     max-height: 70vh;
     max-width: 70vw;
 }
