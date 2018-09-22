@@ -1,0 +1,133 @@
+body {
+    box-sizing: border-box;
+    overflow-y: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+section {
+    height: 100vh;
+    width: 60vw;
+    display: inline-flex;
+    vertical-align: top;
+}
+
+@media (orientation: portrait) {
+    body {
+        width: 100vw;
+        height: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
+        white-space: normal;
+    }
+    
+    section {
+        height: auto;
+        width: 100vw;
+    }
+}
+
+/* landing */
+
+section#landing {
+    background: url("../assets/background.jpg") no-repeat center center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+section#landing div.title {
+    margin: auto;
+    display: grid;
+    grid-template:
+        "photo title" 62%
+        "photo subtitle" 38% / 16rem;
+    position: relative;
+}
+
+@media (orientation: portrait) {
+    section#landing div.title {
+        grid-template:
+            "photo" 0.5fr
+            "title" 0.5fr
+            "subtitle" 0.5fr / 80vw;
+    }
+}
+
+section#landing div.title div.slanted-box {
+    display: none;
+}
+
+@media (orientation: landscape) {
+    section#landing div.title div.slanted-box {
+        display: block;
+        background: white;
+        width: 35vw;
+        height: 55vh;
+        position: absolute;
+        top: -12vh;
+        left: -7vw;
+        clip-path: polygon(0% 100%, 100% 70%, 100% 23%, 0% 0%);
+        transform: rotateY(0deg);
+        transform-origin: left;
+    }
+}
+
+section#landing div.title img {
+    grid-area: photo;
+    width: 15rem;
+    height: 15rem;
+    align-self: center;
+    justify-self: end;
+    margin-right: 1rem;
+    transform: rotateY(0deg);
+    transform-origin: center;
+}
+
+@media (orientation: portrait) {
+    section#landing div.title img {
+        justify-self: center;
+        margin-right: 0px;
+    }
+}
+
+section#landing div.title h1 {
+    grid-area: title;
+    align-self: end;
+    margin: 0;
+    font-size: 3rem;
+    
+    background: black;
+    color: white;
+    padding-left: 0.5rem;
+    position: relative;
+    left: -0.5rem;
+}
+
+section#landing div.title h3 {
+    grid-area: subtitle;
+    align-self: start;
+    margin: 0;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+@media (orientation: portrait) {
+    section#landing div.title h3 {
+        background: white;
+        padding: 2vh;
+    }
+}
+
+/* about */
+
+section#about {
+    background: blue;
+}
+
+/* contact */
+
+section#contact {
+    background: red;
+}

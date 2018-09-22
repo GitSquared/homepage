@@ -1,0 +1,54 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+body {
+    color: black;
+    background: white;
+}
+
+::selection {
+    color: white;
+    background: black;
+}
+
+::-moz-selection {
+    color: white;
+    background: black;
+}
+
+/* fonts */
+
+h1 {
+    font-family: Nunito, sans-serif;
+    font-weight: 400;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: Nunito, sans-serif;
+    font-weight: 200;
+}
+
+p {
+    font-family: Raleway, sans-serif;
+    font-weight: 400;
+}
+
+/* text links */
+
+p a {
+    cursor: pointer;
+    color: inherit;
+    box-sizing: border-box;
+    padding: 0px 0.2rem;
+    text-decoration: underline;
+    transition: background .2s ease-out, color .2s ease-out;
+}
+
+p a:hover, p a:focus {
+    color: white;
+    background: black;
+    text-decoration: none;
+}
