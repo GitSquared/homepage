@@ -55,6 +55,19 @@
                     
                     e.getElementsByTagName("img")[0].setAttribute("style", `transform: rotateY(-${p*150}deg);`);
                     e.getElementsByClassName("slanted-box")[0].setAttribute("style", `transform: rotateY(-${p*150}deg);`);
+                    
+                    e.setAttribute("style", `background-position: -${p*15}vw center;`);
+                }
+                
+                // Other sections default parallax fx
+                if (visible("about")) {
+                    let e = document.getElementById("about");
+                    let p = w.scrollX / w.innerWidth;
+                    
+                    e.getElementsByClassName("section-header-title")[0].setAttribute("style", `left: ${12 - (p*12)}vw;`);
+                    e.getElementsByTagName("article")[0].setAttribute("style", `left: ${7 - (p*7)}vw;`);
+                    
+                    e.getElementsByTagName("h2")[0].setAttribute("style", `margin-left: ${10 - (p*10)}vw;`);
                 }
             }
         });

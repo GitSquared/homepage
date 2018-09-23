@@ -7,9 +7,10 @@ body {
 
 section {
     height: 100vh;
-    width: 60vw;
-    display: inline-flex;
+    width: 80vw;
+    display: inline-grid;
     vertical-align: top;
+    white-space: normal;
 }
 
 @media (orientation: portrait) {
@@ -30,10 +31,20 @@ section {
 /* landing */
 
 section#landing {
-    background: url("../assets/background.jpg") no-repeat center center;
-    background-size: cover;
+    display: inline-flex;
+    background: url("../assets/background.jpg") no-repeat;
+    background-size: 115vw;
+    background-attachment: fixed;
+    background-position: 0vw center;
     width: 100vw;
     height: 100vh;
+}
+
+@media (orientation: portrait) {
+    section#landing {
+        background-size: cover;
+        background-position: center center;
+    }
 }
 
 section#landing div.title {
@@ -62,8 +73,9 @@ section#landing div.title div.slanted-box {
     section#landing div.title div.slanted-box {
         display: block;
         background: white;
-        width: 35vw;
-        height: 55vh;
+        width: 37rem;
+        height: 30rem;
+        max-height: 90vh;
         position: absolute;
         top: -12vh;
         left: -7vw;
@@ -97,7 +109,7 @@ section#landing div.title h1 {
     margin: 0;
     font-size: 3rem;
     
-    background: black;
+    background: #0d1115;
     color: white;
     padding-left: 0.5rem;
     position: relative;
@@ -120,14 +132,142 @@ section#landing div.title h3 {
     }
 }
 
-/* about */
+@media (orientation: landscape) {
+    section#landing::after {
+        content: "";
+        height: 100vh;
+        width: 5vw;
+        background: white;
+        clip-path: polygon(100% 0, 0 0, 100% 100%);
+    }
+}
+
+/* general rules for following sections */
+
+section:not(:first-of-type) {
+    box-sizing: border-box;
+}
+
+@media (orientation: landscape) {
+    section:not(:first-of-type) {
+        grid-template:
+        "title title transition" 10rem
+        "article aside transition" calc(90% - 10rem)
+        "padding padding transition" 10% / calc(45% - 2.5vw) calc(55% - 2.5vw) 5vw;
+    }
+}
+
+@media (orientation: portrait) {
+    section:not(:first-of-type) {
+        grid-template:
+            "title"
+            "article"
+            "aside" / 100vw;
+        padding-top: 6vh;
+    }
+}
+
+h1.section-header-title {
+    font-size: 3rem;
+    grid-area: title;
+    justify-self: start;
+    align-self: center;
+    margin: 0;
+    position: relative;
+    color: #0d1115;
+}
+
+h1.section-header-title::before {
+    vertical-align: baseline;
+    font-weight: 300;
+}
+
+@media (orientation: portrait) {
+    h1.section-header-title {
+        justify-self: center;
+        margin-top: 2.1rem;
+    }
+    
+    h1.section-header-title::before {
+        position: absolute;
+        top: -80%;
+    }
+}
+
+section:not(:first-of-type) article {
+    grid-area: article;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+section:not(:first-of-type) aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section:not(:first-of-type) article p {
+    text-align: justify;
+}
+
+section:not(:first-of-type) article, section:not(:first-of-type) aside {
+    position: relative;
+}
+
+@media (orientation: portrait) {
+    section:not(:first-of-type) article, section:not(:first-of-type) aside {
+        padding: 2rem;
+    }
+}
+
+/* "about" */
 
 section#about {
-    background: blue;
+    background: white;
+}
+
+section#about h1.section-header-title::before {
+    content: "#01 ";
+    color: rgba(0,0,0, 0.2);
+}
+
+section#about article h2 {
+    background: #0d1115;
+    color: white;
+    padding: 0.5rem;
+}
+
+@media (orientation: landscape) {
+    section#about::after {
+        content: "";
+        grid-area: transition;
+        background: #0d1115;
+        clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    }
 }
 
 /* contact */
 
 section#contact {
-    background: red;
+    background: #0d1115;
+    color: white;
+}
+
+@media (orientation: landscape) {
+    section#contact {
+        padding-left: 2rem;
+    }
+}
+
+section#contact h1.section-header-title {
+    color: white;
+}
+
+section#contact h1.section-header-title::before {
+    content: "#02 ";
+    color: rgba(255,255,255, 0.4);
 }
