@@ -168,7 +168,7 @@ section:not(:first-of-type) {
 }
 
 h1.section-header-title {
-    font-size: 3rem;
+    font-size: 4rem;
     grid-area: title;
     justify-self: start;
     align-self: center;
@@ -235,13 +235,31 @@ section#about h1.section-header-title::before {
     color: rgba(0,0,0, 0.2);
 }
 
+section#about article {
+    z-index: 5;
+}
+
 section#about article h2 {
     background: #0d1115;
     color: white;
     padding: 0.5rem;
+    font-size: 1.7rem;
+}
+
+section#about article p {
+    font-size: 1.3rem;
+}
+
+section#about aside img {
+    width: 120%;
+    z-index: 0;
 }
 
 @media (orientation: landscape) {
+    section#about article p {
+        background: white;
+        border-right: 0.5rem solid white;
+    }
     section#about::after {
         content: "";
         grid-area: transition;
@@ -255,6 +273,7 @@ section#about article h2 {
 section#contact {
     background: #0d1115;
     color: white;
+    z-index: 5;
 }
 
 @media (orientation: landscape) {

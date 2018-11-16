@@ -59,7 +59,7 @@
                     e.setAttribute("style", `background-position: -${p*15}vw center;`);
                 }
                 
-                // Other sections default parallax fx
+                // About section parallax
                 if (visible("about")) {
                     let e = document.getElementById("about");
                     let p = w.scrollX / w.innerWidth;
@@ -68,6 +68,8 @@
                     e.getElementsByTagName("article")[0].setAttribute("style", `left: ${7 - (p*7)}vw;`);
                     
                     e.getElementsByTagName("h2")[0].setAttribute("style", `margin-left: ${10 - (p*10)}vw;`);
+                    
+                    e.getElementsByTagName("img")[0].setAttribute("style", `margin-right: ${p*12}vw;`);
                 }
             }
         });
