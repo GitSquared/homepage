@@ -13,7 +13,7 @@
         d.addEventListener("wheel", e => {
             if (w.innerWidth > w.innerHeight) {
                 w.scrollBy({
-                    left: e.deltaY*120,
+                    left: e.deltaY*150,
                     behavior:"smooth"
                 });
             }
