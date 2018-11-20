@@ -292,7 +292,18 @@ section#contact h1.section-header-title::before {
 }
 
 section#contact article {
-    padding-left: 30%;
+    align-items: center;
+}
+
+@media (orientation: landscape) {
+    section#contact article {
+        padding-left: 30%;
+    }
+    
+    section#contact aside {
+        align-items: flex-start;
+        padding-left: 30%;
+    }
 }
 
 section#contact article h2 {
@@ -300,11 +311,6 @@ section#contact article h2 {
     color: #0d1115;
     padding: 0.5rem;
     font-size: 1.7rem;
-}
-
-section#contact aside {
-    align-items: flex-start;
-    padding-left: 30%;
 }
 
 section#contact aside h2 {
