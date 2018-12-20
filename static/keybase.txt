@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/squared_0
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://squared.codebrew.fr
+  * I am squared_0 (https://keybase.io/squared_0) on keybase.
+  * I have a public key ASCO3nTnobplOnnL7HwlMqshb4ouEgUnI4-Ai0E7LN0wwQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01208ede74e7a1ba653a79cbec7c2532ab216f8a2e120527238f808b413b2cdd30c10a",
+      "host": "keybase.io",
+      "kid": "01208ede74e7a1ba653a79cbec7c2532ab216f8a2e120527238f808b413b2cdd30c10a",
+      "uid": "99d5ffb316e777c97308a7bd7f18aa19",
+      "username": "squared_0"
+    },
+    "merkle_root": {
+      "ctime": 1530783247,
+      "hash": "f417e93770a0ea2c939ce2d593be2f92a829dee4f68940c8c6b3d35b4126e440425e4d51d1d22033682eae51feb87c57c0526eaea5f30d9e1eecd61edf41fd44",
+      "hash_meta": "a4b884d666ddabf8e3288acffc6fc883806acd4bdc8048115f525db5bb4ecf31",
+      "seqno": 3202531
+    },
+    "service": {
+      "entropy": "7E2ETa6rfUU/rP5qXh/7gXrL",
+      "hostname": "squared.codebrew.fr",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.1.2"
+  },
+  "ctime": 1530783281,
+  "expire_in": 504576000,
+  "prev": "8a5a65d445b5f48da1d80fc0aa3ce6e104424f7ccea84239561626b20ffdea82",
+  "seqno": 6,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgjt5056G6ZTp5y+x8JTKrIW+KLhIFJyOPgItBOyzdMMEKp3BheWxvYWTESpcCBsQgilpl1EW19I2h2A/Aqjzm4QRCT3zOqEI5VhYmsg/96oLEIJaPhy9c/aJQCOcJ1KDaCARco+fEULPXmNJPlBtsbIRLAgHCo3NpZ8RAKaq5raPlNl9bYZbccl4KOsz/EG5vqgDCG9yYNEjoleygsO2UHjtb3NIsbOAOSF2FgCRAfpC59AgTwJ1Ogu23AqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEILOV4swhfFjB+5cRCiQzGfza2CsvavbbQOG6i5poK6+Oo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/squared_0
+
+==================================================================

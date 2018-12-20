@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>gitsquared.github.io/fr/about/</loc>
+    <lastmod>2018-12-19T20:04:36+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="gitsquared.github.io/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="gitsquared.github.io/fr/about/"
+                />
+  </url>
+  
+  <url>
+    <loc>gitsquared.github.io/fr/categories/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="gitsquared.github.io/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="gitsquared.github.io/fr/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>gitsquared.github.io/fr/</loc>
+    <lastmod>2018-12-19T20:04:36+01:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="gitsquared.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="gitsquared.github.io/fr/"
+                />
+  </url>
+  
+  <url>
+    <loc>gitsquared.github.io/fr/tags/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="gitsquared.github.io/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="gitsquared.github.io/fr/tags/"
+                />
+  </url>
+  
+</urlset>

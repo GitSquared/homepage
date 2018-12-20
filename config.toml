@@ -1,0 +1,94 @@
+baseurl = "gitsquared.github.io"
+title = "Gaby - Squared"
+theme = "coder"
+languagecode = "en"
+defaultcontentlanguage = "en"
+
+# Used to deploy on Github Pages
+publishDir = "docs"
+
+
+paginate = 20
+canonifyurls = true
+
+pygmentsstyle = "bw"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+disable_comments = true
+
+[params]
+    author = "Gaby 'Squared' Saillard"
+
+    avatarurl = "img/avatar.jpg"
+    favicon_32 = "/img/favicon-32x32.png"
+    favicon_16 = "/img/favicon-16x16.png"
+
+    hidecredits = false
+    hidecopyright = false
+    rtl = false
+    math = false
+    custom_css = ["css/custom.css"]
+
+# Multilingual support
+[languages]
+    [languages.en]
+        languagename = "English"
+
+        [languages.en.params]
+            info = "Industrial Engineering Student & Creative Hobbyist Developer"
+            description = "Gaby, also known as Squared, personal website"
+            keywords = "blog,developer,personal"
+            footercontent = "\"Insert great quote here\" - Buddha"
+
+        [languages.en.menu]
+
+        [[languages.en.menu.main]]
+            name = "Blog"
+            weight = 1
+            url  = "/posts/"
+        [[languages.en.menu.main]]
+            name = "About+Contact"
+            weight = 2
+            url = "/about/"
+    [languages.fr]
+        languagename = "Français"
+
+        [languages.fr.params]
+            info = "Étudiant en Conception Industrielle & Développeur Créatif Amateur"
+            description = "Gaby, aussi connu sous le pseudonyme de Squared, site personnel"
+            keywords = "blog,developpeur,personnel"
+            footercontent = "\"Insérer une citation intéressante ici\" - Buddha"
+
+        [languages.fr.menu]
+
+        [[languages.fr.menu.main]]
+            name = "Blog (anglais)"
+            weight = 1
+            url  = "../posts/"
+        [[languages.fr.menu.main]]
+            name = "À Propos+Contact"
+            weight = 2
+            url = "/about/"
+
+# Social links
+[[params.social]]
+    name = "Github"
+    icon = "fab fa-github fa-2x"
+    weight = 1
+    url = "https://github.com/GitSquared/"
+[[params.social]]
+    name = "Gitlab"
+    icon = "fab fa-gitlab fa-2x"
+    weight = 2
+    url = "https://gitlab.com/GitSquared/"
+[[params.social]]
+    name = "Reddit"
+    icon = "fab fa-reddit-alien fa-2x"
+    weight = 3
+    url = "https://www.reddit.com/user/Squared_fr"
+[[params.social]]
+    name = "Instagram"
+    icon = "fab fa-instagram fa-2x"
+    weight = 3
+    url = "https://instagram.com/gabyblbl"

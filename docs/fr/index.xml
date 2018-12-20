@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gaby - Squared</title>
+    <link>gitsquared.github.io/fr/</link>
+    <description>Recent content on Gaby - Squared</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 19 Dec 2018 20:04:36 +0100</lastBuildDate>
+    
+	<atom:link href="gitsquared.github.io/fr/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>À Propos</title>
+      <link>gitsquared.github.io/fr/about/</link>
+      <pubDate>Wed, 19 Dec 2018 20:04:36 +0100</pubDate>
+      
+      <guid>gitsquared.github.io/fr/about/</guid>
+      <description>Vous me connaissez peut-être comme le créateur &amp;amp; maintainer de eDEX-UI, un logiciel libre, émulateur de terminal et moniteur système pour ordinateurs. Je suis également le webmestre / administrateur système chez &amp;lt;codebrew/&amp;gt;. Je développe des applications et des services par passion, avec l&amp;rsquo;intention de me professionaliser dans un futur proche. En attendant, j&amp;rsquo;étudie la conception et le design industriel près de Paris.
+I also make tiny bits of music with my guitar sometimes, but that&amp;rsquo;s probably not what you&amp;rsquo;re here for.</description>
+    </item>
+    
+  </channel>
+</rss>
