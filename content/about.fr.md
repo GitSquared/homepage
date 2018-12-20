@@ -6,8 +6,7 @@ languagecode: "fr"
 
 Vous me connaissez peut-être comme le créateur & *maintainer* de [eDEX-UI](https://github.com/GitSquared/edex-ui), un logiciel libre, émulateur de terminal et moniteur système pour ordinateurs. Je suis également le webmestre / administrateur système chez [&lt;codebrew/&gt;](https://codebrew.fr). Je développe des applications et des services par passion, avec l'intention de me professionaliser dans un futur proche. En attendant, j'étudie la conception et le design industriel près de Paris.
 
-I also make tiny bits of music with my guitar sometimes, but that's probably not what you're here for.
-Je fais aussi des petits enregistrements musicaux avec ma guitare de temps en temps, mais vous n'êtes probablement pas là pour ça. :P
+Je fais aussi des petits enregistrements avec ma guitare de temps en temps, mais vous n'êtes probablement pas là pour ça. :P
 
 ## Contact
 
