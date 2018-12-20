@@ -3,74 +3,74 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>gitsquared.github.io/about/</loc>
+    <loc>squared.codebrew.fr/about/</loc>
     <lastmod>2018-12-19T19:16:08+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="gitsquared.github.io/fr/about/"
+                href="squared.codebrew.fr/fr/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="gitsquared.github.io/about/"
+                href="squared.codebrew.fr/about/"
                 />
   </url>
   
   <url>
-    <loc>gitsquared.github.io/posts/helloworld/</loc>
+    <loc>squared.codebrew.fr/posts/helloworld/</loc>
     <lastmod>2018-12-19T19:13:31+01:00</lastmod>
   </url>
   
   <url>
-    <loc>gitsquared.github.io/categories/</loc>
+    <loc>squared.codebrew.fr/categories/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="gitsquared.github.io/fr/categories/"
+                href="squared.codebrew.fr/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="gitsquared.github.io/categories/"
+                href="squared.codebrew.fr/categories/"
                 />
   </url>
   
   <url>
-    <loc>gitsquared.github.io/</loc>
+    <loc>squared.codebrew.fr/</loc>
     <lastmod>2018-12-19T19:16:08+01:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="gitsquared.github.io/fr/"
+                href="squared.codebrew.fr/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="gitsquared.github.io/"
+                href="squared.codebrew.fr/"
                 />
   </url>
   
   <url>
-    <loc>gitsquared.github.io/posts/</loc>
+    <loc>squared.codebrew.fr/posts/</loc>
     <lastmod>2018-12-19T19:13:31+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>gitsquared.github.io/tags/</loc>
+    <loc>squared.codebrew.fr/tags/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="gitsquared.github.io/fr/tags/"
+                href="squared.codebrew.fr/fr/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="gitsquared.github.io/tags/"
+                href="squared.codebrew.fr/tags/"
                 />
   </url>
   

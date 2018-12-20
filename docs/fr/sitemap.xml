@@ -3,63 +3,63 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>gitsquared.github.io/fr/about/</loc>
+    <loc>squared.codebrew.fr/fr/about/</loc>
     <lastmod>2018-12-19T20:04:36+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="gitsquared.github.io/about/"
+                href="squared.codebrew.fr/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="gitsquared.github.io/fr/about/"
+                href="squared.codebrew.fr/fr/about/"
                 />
   </url>
   
   <url>
-    <loc>gitsquared.github.io/fr/categories/</loc>
+    <loc>squared.codebrew.fr/fr/categories/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="gitsquared.github.io/categories/"
+                href="squared.codebrew.fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="gitsquared.github.io/fr/categories/"
+                href="squared.codebrew.fr/fr/categories/"
                 />
   </url>
   
   <url>
-    <loc>gitsquared.github.io/fr/</loc>
+    <loc>squared.codebrew.fr/fr/</loc>
     <lastmod>2018-12-19T20:04:36+01:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="gitsquared.github.io/"
+                href="squared.codebrew.fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="gitsquared.github.io/fr/"
+                href="squared.codebrew.fr/fr/"
                 />
   </url>
   
   <url>
-    <loc>gitsquared.github.io/fr/tags/</loc>
+    <loc>squared.codebrew.fr/fr/tags/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="gitsquared.github.io/tags/"
+                href="squared.codebrew.fr/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="gitsquared.github.io/fr/tags/"
+                href="squared.codebrew.fr/fr/tags/"
                 />
   </url>
   

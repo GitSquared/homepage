@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Gaby - Squared</title>
-    <link>gitsquared.github.io/fr/categories/</link>
+    <link>squared.codebrew.fr/fr/categories/</link>
     <description>Recent content in Categories on Gaby - Squared</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	<atom:link href="gitsquared.github.io/fr/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="squared.codebrew.fr/fr/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
