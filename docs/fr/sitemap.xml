@@ -3,63 +3,63 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>squared.codebrew.fr/fr/about/</loc>
+    <loc>https://squared.codebrew.fr/fr/about/</loc>
     <lastmod>2018-12-19T20:04:36+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="squared.codebrew.fr/about/"
+                href="https://squared.codebrew.fr/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="squared.codebrew.fr/fr/about/"
+                href="https://squared.codebrew.fr/fr/about/"
                 />
   </url>
   
   <url>
-    <loc>squared.codebrew.fr/fr/categories/</loc>
+    <loc>https://squared.codebrew.fr/fr/categories/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="squared.codebrew.fr/categories/"
+                href="https://squared.codebrew.fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="squared.codebrew.fr/fr/categories/"
+                href="https://squared.codebrew.fr/fr/categories/"
                 />
   </url>
   
   <url>
-    <loc>squared.codebrew.fr/fr/</loc>
+    <loc>https://squared.codebrew.fr/fr/</loc>
     <lastmod>2018-12-19T20:04:36+01:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="squared.codebrew.fr/"
+                href="https://squared.codebrew.fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="squared.codebrew.fr/fr/"
+                href="https://squared.codebrew.fr/fr/"
                 />
   </url>
   
   <url>
-    <loc>squared.codebrew.fr/fr/tags/</loc>
+    <loc>https://squared.codebrew.fr/fr/tags/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="squared.codebrew.fr/tags/"
+                href="https://squared.codebrew.fr/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="squared.codebrew.fr/fr/tags/"
+                href="https://squared.codebrew.fr/fr/tags/"
                 />
   </url>
   

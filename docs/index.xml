@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gaby - Squared</title>
-    <link>squared.codebrew.fr/</link>
+    <link>https://squared.codebrew.fr/</link>
     <description>Recent content on Gaby - Squared</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 19 Dec 2018 19:16:08 +0100</lastBuildDate>
     
-	<atom:link href="squared.codebrew.fr/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://squared.codebrew.fr/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>squared.codebrew.fr/about/</link>
+      <link>https://squared.codebrew.fr/about/</link>
       <pubDate>Wed, 19 Dec 2018 19:16:08 +0100</pubDate>
       
-      <guid>squared.codebrew.fr/about/</guid>
+      <guid>https://squared.codebrew.fr/about/</guid>
       <description>You might know me as the creator &amp;amp; maintainer of eDEX-UI, an open-source terminal emulator and system monitor for desktops, or as the webmaster / sysadmin at &amp;lt;codebrew/&amp;gt;. I mess around with computers &amp;amp; code as a hobby and might make it a job someday. In the meantime, I study industrial conception &amp;amp; design near Paris, France.
 I also make tiny bits of music with my guitar sometimes, but that&amp;rsquo;s probably not what you&amp;rsquo;re here for.</description>
     </item>
     
     <item>
       <title>Hello World</title>
-      <link>squared.codebrew.fr/posts/helloworld/</link>
+      <link>https://squared.codebrew.fr/posts/helloworld/</link>
       <pubDate>Wed, 19 Dec 2018 19:13:31 +0100</pubDate>
       
-      <guid>squared.codebrew.fr/posts/helloworld/</guid>
+      <guid>https://squared.codebrew.fr/posts/helloworld/</guid>
       <description>This blog is under construction. Come back later!</description>
     </item>
     

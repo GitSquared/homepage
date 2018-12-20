@@ -2,14 +2,14 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	
 	<sitemap>
-	   	<loc>squared.codebrew.fr/en/sitemap.xml</loc>
+	   	<loc>https://squared.codebrew.fr/en/sitemap.xml</loc>
 		
 	   	<lastmod>2018-12-19T19:16:08+01:00</lastmod>
 		
 	</sitemap>
 	
 	<sitemap>
-	   	<loc>squared.codebrew.fr/fr/sitemap.xml</loc>
+	   	<loc>https://squared.codebrew.fr/fr/sitemap.xml</loc>
 		
 	   	<lastmod>2018-12-19T20:04:36+01:00</lastmod>
 		

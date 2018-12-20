@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Gaby - Squared</title>
-    <link>squared.codebrew.fr/posts/</link>
+    <link>https://squared.codebrew.fr/posts/</link>
     <description>Recent content in Posts on Gaby - Squared</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 19 Dec 2018 19:13:31 +0100</lastBuildDate>
     
-	<atom:link href="squared.codebrew.fr/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://squared.codebrew.fr/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hello World</title>
-      <link>squared.codebrew.fr/posts/helloworld/</link>
+      <link>https://squared.codebrew.fr/posts/helloworld/</link>
       <pubDate>Wed, 19 Dec 2018 19:13:31 +0100</pubDate>
       
-      <guid>squared.codebrew.fr/posts/helloworld/</guid>
+      <guid>https://squared.codebrew.fr/posts/helloworld/</guid>
       <description>This blog is under construction. Come back later!</description>
     </item>
     
