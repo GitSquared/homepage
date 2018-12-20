@@ -18,6 +18,11 @@
   </url>
   
   <url>
+    <loc>gitsquared.github.io/posts/helloworld/</loc>
+    <lastmod>2018-12-19T19:13:31+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>gitsquared.github.io/categories/</loc>
     <priority>0</priority>
     <xhtml:link
@@ -46,6 +51,12 @@
                 hreflang="en"
                 href="gitsquared.github.io/"
                 />
+  </url>
+  
+  <url>
+    <loc>gitsquared.github.io/posts/</loc>
+    <lastmod>2018-12-19T19:13:31+01:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
