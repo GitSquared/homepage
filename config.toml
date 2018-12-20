@@ -83,12 +83,17 @@ disable_comments = true
     weight = 2
     url = "https://gitlab.com/GitSquared/"
 [[params.social]]
+    name = "Keybase"
+    icon = "fab fa-keybase fa-2x"
+    weight = 3
+    url = "https://keybase.io/squared_0"
+[[params.social]]
     name = "Reddit"
     icon = "fab fa-reddit-alien fa-2x"
-    weight = 3
+    weight = 4
     url = "https://www.reddit.com/user/Squared_fr"
 [[params.social]]
     name = "Instagram"
     icon = "fab fa-instagram fa-2x"
-    weight = 3
+    weight = 5
     url = "https://instagram.com/gabyblbl"
