@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://squared.codebrew.fr/posts/code-signing/</loc>
+    <lastmod>2018-12-28T14:55:36+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://squared.codebrew.fr/about/</loc>
     <lastmod>2018-12-19T19:16:08+01:00</lastmod>
     <xhtml:link
@@ -39,7 +44,7 @@
   
   <url>
     <loc>https://squared.codebrew.fr/</loc>
-    <lastmod>2018-12-19T19:16:08+01:00</lastmod>
+    <lastmod>2018-12-28T14:55:36+01:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -55,7 +60,7 @@
   
   <url>
     <loc>https://squared.codebrew.fr/posts/</loc>
-    <lastmod>2018-12-19T19:13:31+01:00</lastmod>
+    <lastmod>2018-12-28T14:55:36+01:00</lastmod>
     <priority>0</priority>
   </url>
   

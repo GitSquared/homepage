@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Gaby - Squared</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 19 Dec 2018 19:13:31 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 28 Dec 2018 14:55:36 +0100</lastBuildDate>
     
 	<atom:link href="https://squared.codebrew.fr/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Code Signing &amp; why it (currently) sucks</title>
+      <link>https://squared.codebrew.fr/posts/code-signing/</link>
+      <pubDate>Fri, 28 Dec 2018 14:55:36 +0100</pubDate>
+      
+      <guid>https://squared.codebrew.fr/posts/code-signing/</guid>
+      <description>tl;dr: Desktop software signing is like SSL used to be not so long ago: both extremely interesting for end-users and developers alike, but too expensive for anyone not running a business.
+Earlier today, I was looking at the issues left on eDEX-UI, and decided to take a look at #278 - &amp;ldquo;Implementing an internal self-update mechanism&amp;rdquo;.
+After a bit of thinking and research, I decided to drop the idea, even though it would in theory be easy to implement: there is the nice, built-in Electron autoUpdate API, but I&amp;rsquo;d need to code-sign the releases first, and while there is also the electron-builder way that does not require signing, I just don&amp;rsquo;t feel that the added security risks are worth it.</description>
+    </item>
     
     <item>
       <title>Hello World</title>
