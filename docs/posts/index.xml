@@ -22,14 +22,5 @@ Earlier today, I was looking at the issues left on eDEX-UI, and decided to take 
 After a bit of thinking and research, I decided to drop the idea, even though it would in theory be easy to implement: there is the nice, built-in Electron autoUpdate API, but I&amp;rsquo;d need to code-sign the releases first, and while there is also the electron-builder way that does not require signing, I just don&amp;rsquo;t feel that the added security risks are worth it.</description>
     </item>
     
-    <item>
-      <title>Hello World</title>
-      <link>https://squared.codebrew.fr/posts/helloworld/</link>
-      <pubDate>Wed, 19 Dec 2018 19:13:31 +0100</pubDate>
-      
-      <guid>https://squared.codebrew.fr/posts/helloworld/</guid>
-      <description>This blog is under construction. Come back later!</description>
-    </item>
-    
   </channel>
 </rss>
