@@ -9,13 +9,13 @@ draft: false
 
 --- 
 
-Earlier today, I was looking at the issues left on [eDEX-UI](https://github.com/GitSquared/edex-ui), and decided to take a look at [#278](https://github.com/GitSquared/edex-ui/issues/278) - "Implementing an internal self-update mechanism".
+Earlier today, I was looking at the issues left on [eDEX-UI](https://github.com/GitSquared/edex-ui), and decided to work on [#278](https://github.com/GitSquared/edex-ui/issues/278) - "Implementing an internal self-update mechanism".
 
-After a bit of thinking and research, I decided to drop the idea, even though it would in theory be easy to implement: there is the nice, built-in Electron [autoUpdate](https://electronjs.org/docs/api/auto-updater) API, but I'd need to code-sign the releases first, and while there is also the [electron-builder way](https://www.electron.build/auto-update) that does not require signing, I just don't feel that the added security risks are worth it.
+After a bit of thinking and research, I ended up dropping the idea, even though it would in theory be easy to implement: there is the nice, built-in Electron [autoUpdate](https://electronjs.org/docs/api/auto-updater) API, but I'd need to code-sign the releases first, and while there is also the [electron-builder way](https://www.electron.build/auto-update) that does not require signing, I just don't feel that the added security risks are worth it.
 
 A little background explanation: Code-signing is a process by which a developer use certified cryptographic keys to digitally sign binaries before shipping software to end-users. The OS verifies that the signature is valid before installing/running the software, and it ensures that the code hasn't been messed with between the original release and the version downloaded by the user.
 
-This whole code authentication thing is a great idea, in theory; you may wonder why it hasn't been implemented here yet - indeed, when you try to install eDEX-UI on either macOS or Windows, you are prompted with a warning pop-up that you're trying to install unverified software published by an unknown developer (that would be me).
+The whole thing drastically improves security, especially in context of self-updating apps that may be susceptible to mitm/fake server attacks; you may wonder why it hasn't been implemented on eDEX yet - indeed, when you try to install it on either macOS or Windows, you are prompted with a warning pop-up telling you that you're trying to install unverified software published by an unknown developer (that would be me).
 
 <p align="center">
 	<img alt="macOS warning popup for unsigned apps" src="/img/code-signing/macOS-popup.png"/>
