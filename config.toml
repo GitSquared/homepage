@@ -97,3 +97,8 @@ disable_comments = true
     icon = "fab fa-instagram fa-2x"
     weight = 5
     url = "https://instagram.com/gabyblbl"
+[[params.social]]
+    name = "Telegram"
+    icon = "fab fa-telegram fa-2x"
+    weight = 6
+    url = "https://t.me/GabySquared"
