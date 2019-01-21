@@ -1,8 +1,8 @@
-+++ 
-draft = true
++++
+draft = false
 date = 2019-01-20T18:50:33+01:00
 title = "Introducing Mr.Worldwide"
-slug = "mr-worldwide" 
+slug = "mr-worldwide"
 +++
 
 To help with a little investigation of mine regarding [international languages support in eDEX-UI](https://github.com/GitSquared/edex-ui/issues/370), I wanted to analyze a font file to see how many alphabets and languages it could support.
@@ -32,13 +32,13 @@ First, we use the [drag&drop HTML API](https://developer.mozilla.org/en-US/docs/
 function initApp() {
     var dropper = document.getElementById("dragdrop");
     var icon = document.getElementById("dragdrop-icon");
-    
+
     dropper.ondragover = e => {
         e.preventDefault();
     };
     dropper.ondrop = e => {
         e.preventDefault();
-        
+
         dropper.ondrop = null;
 
         var dt = e.dataTransfer;
@@ -177,20 +177,20 @@ document.fonts.load("12px Blank").then(() => {
         let success = 0;
         // Will store the total number of glyphs for this script.
         let divisor = 0;
-        
+
         // Loop through each unicode range used in this script:
         window.scripts[scriptName].forEach(range => {
         	
             /* Add the total number of glyphs in this range
             to our divisor. */
             divisor = divisor + (range[1] - range[0]);
-            
+
             // Loop through each individual unicode character:
             for (let i = range[0]; i <= range[1]; i++) {
-            
+
             	// Write the character to our test node.
                 tester.textContent = String.fromCodePoint(i);
-                
+
                 /* If a character is rendered, increment the
                 number of successfully rendered glyphs. */
                 if (tester.offsetWidth > 0) {

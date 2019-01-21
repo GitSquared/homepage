@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Gaby &#39;Squared&#39; Saillard">
+    <meta name="description" content="Gaby, also known as Squared, personal website">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <base href="https://squared.codebrew.fr">
+    <title>
+  Introducing Mr.Worldwide · Gaby - Squared
+</title>
+
+    <link rel="canonical" href="https://squared.codebrew.fr/posts/mr-worldwide/">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather:300,700|Source+Code+Pro:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://squared.codebrew.fr/css/coder.min.cd087ace86754b082dec94545567f8361cba42e84f8e15edbc4a9f6e52bd1f6a.css" integrity="sha256-zQh6zoZ1Swgt7JRUVWf4Nhy6QuhPjhXtvEqfblK9H2o=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="https://squared.codebrew.fr/css/custom.css">
+    
+
+    <link rel="icon" type="image/png" href="https://squared.codebrew.fr/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://squared.codebrew.fr/img/favicon-16x16.png" sizes="16x16">
+
+    
+
+    <meta name="generator" content="Hugo 0.52" />
+  </head>
+
+  <body class=" ">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://squared.codebrew.fr">
+      Gaby - Squared
+    </a>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://squared.codebrew.fr/posts/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://squared.codebrew.fr/about/">About&#43;Contact</a>
+          </li>
+        
+      
+      
+        
+        
+        
+          
+        
+          
+            
+              <li class="navigation-item menu-separator">
+                <span>|</span>
+              </li>
+              
+            
+            <li class="navigation-item">
+              <a href="https://squared.codebrew.fr/fr/">Français</a>
+            </li>
+          
+        
+      
+    </ul>
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Introducing Mr.Worldwide</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2019-01-20T18:50:33&#43;01:00'>
+                January 20, 2019
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              9 minutes read
+            </span>
+          </div>
+          
+          
+        </div>
+      </header>
+
+      <div>
+        
+
+<p>To help with a little investigation of mine regarding <a href="https://github.com/GitSquared/edex-ui/issues/370">international languages support in eDEX-UI</a>, I wanted to analyze a font file to see how many alphabets and languages it could support.</p>
+
+<p>After a bit of <a href="https://duckduckgo.com">ducking</a> around, I couldn&rsquo;t find an online tool that did this properly, so I built my own: <strong><a href="https://github.com/GitSquared/mrworldwide">Mr. Worldwide</a></strong>.</p>
+
+<p align="center">
+    <img alt="Mr.Worldwide demo" style="box-shadow: 2px 2px 5px rgba(0,0,0,0.3)" src="https://squared.codebrew.fr/img/mr-worldwide/demo.gif"/>
+</p>
+
+<p>Mr.Worldwide analyzes the writing systems supported by a font (support of specific unicode ranges corresponding to regional languages) and display the results in a way that is easy to understand at a glance (a colored world map).</p>
+
+<p>The name is of course a reference to the 2011 <a href="https://knowyourmeme.com/memes/mr-worldwide">meme</a> - I take great pride in gaving any piece of software I build the shittiest name possible*. The tool itself is only one, sort-of-lengthy, browser-side javascript file that uses a lot of bleeding edge web APIs like <a href="https://developer.mozilla.org/en-US/docs/Web/API/FontFaceSet">FontFaceSet</a> for dynamically loading fonts in the webpage.</p>
+
+<p>The overall look of the interface is <del>shamelessly stolen</del> inspired from <a href="https://iad.zeit.co">Zeit.co&rsquo;s datacenter ping tests</a> - I&rsquo;m a real fan of their modern, high contrast designs on their websites and panels, and wanted to try and borrow a bit from that. Which turned out to not just be &ldquo;a bit&rdquo; but whatever, at least it doesn&rsquo;t look (too) ugly.</p>
+
+<p>Let&rsquo;s dive in into the code, shall we?</p>
+
+<h2 id="01-loading-a-custom-font-from-a-file-with-drag-drop-for-the-wow-factor">#01: Loading a custom font from a file, with drag &amp; drop for the wow factor</h2>
+
+<p>The first step in the tool&rsquo;s workflow is to get a web font file from the user and load it up into the browser so it can be tested.</p>
+
+<p>I wanted to make an intuitive, drag &amp; drop experience - something I never actually looked into before - and it turned out to be really easy to implement, considering this tool only targets ultra-modern browsers so I didn&rsquo;t have to worry too much about compatibility.</p>
+
+<p>First, we use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">drag&amp;drop HTML API</a> and specifically the <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer">DataTransfer property</a> of the <code>drop</code> event to get a file from the user.</p>
+
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="font-weight:bold">function</span> initApp() {
+    <span style="font-weight:bold">var</span> dropper = document.getElementById(<span style="font-style:italic">&#34;dragdrop&#34;</span>);
+    <span style="font-weight:bold">var</span> icon = document.getElementById(<span style="font-style:italic">&#34;dragdrop-icon&#34;</span>);
+
+    dropper.ondragover = e =&gt; {
+        e.preventDefault();
+    };
+    dropper.ondrop = e =&gt; {
+        e.preventDefault();
+
+        dropper.ondrop = <span style="font-weight:bold">null</span>;
+
+        <span style="font-weight:bold">var</span> dt = e.dataTransfer;
+        <span style="font-weight:bold">if</span> (dt.files.length !== 1) {
+            icon.setAttribute(<span style="font-style:italic">&#34;src&#34;</span>, <span style="font-style:italic">&#34;assets/no.svg&#34;</span>);
+            setTimeout(initApp, 1000);
+        } <span style="font-weight:bold">else</span> {
+            <span style="font-style:italic">// We have the file in dt.files[0]
+</span><span style="font-style:italic"></span>        }
+    };
+}
+</code></pre></td></tr></table>
+</div>
+</div>
+
+<p>The <code>preventDefault()</code>s on dragover &amp; drop are needed to ensure that those events won&rsquo;t be handled by the browser, which would open the file in a new tab. If more than one file is dropped, a &ldquo;denied&rdquo; symbol is displayed for a second, and then the app&rsquo;s logic is restarted.</p>
+
+<p>Now, we need to get the binary data from the file. For this, we&rsquo;re going to use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/FileReader">FileReader API</a>, like this:</p>
+
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="font-weight:bold">var</span> fr = <span style="font-weight:bold">new</span> FileReader();
+fr.onerror = () =&gt; {
+    <span style="font-style:italic">// Read failed, restart.
+</span><span style="font-style:italic"></span>    icon.setAttribute(<span style="font-style:italic">&#34;src&#34;</span>, <span style="font-style:italic">&#34;assets/no.svg&#34;</span>);
+    setTimeout(initApp, 1000);
+};
+
+fr.onload = e =&gt; {
+    <span style="font-weight:bold">var</span> buffer = e.target.result;
+    <span style="font-style:italic">/* buffer is an ArrayBuffer with the binary
+</span><span style="font-style:italic">     data from the dropped file. */</span>
+};
+			
+<span style="font-style:italic">// We got our handlers in place; start reading.
+</span><span style="font-style:italic"></span>fr.readAsArrayBuffer(dt.files[0]);
+</code></pre></td></tr></table>
+</div>
+</div>
+
+<p>Reading the file as an <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a> allows us to feed it to the (experimental) <a href="https://developer.mozilla.org/en-US/docs/Web/API/FontFace">FontFace API</a>, which allows us to programmatically create new fonts and load them into the webpage - it&rsquo;s the same thing as defining a <code>@font-face</code> rule in CSS, but from Javascript.</p>
+
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="font-weight:bold">var</span> buffer = e.target.result;
+window.testFont = <span style="font-weight:bold">new</span> FontFace(<span style="font-style:italic">&#34;testFont&#34;</span>, buffer);
+</code></pre></td></tr></table>
+</div>
+</div>
+
+<p>Creating a new FontFace object never raises an error with the current spec/implementations, but that doesn&rsquo;t mean it worked all right: we didn&rsquo;t do any input check, so we&rsquo;re not even sure that the file provided is indeed a loadable web font.</p>
+
+<p>Thankfully, FontFace objects have a <code>status</code> property - it can take the values <code>&quot;unloaded&quot;</code>, <code>&quot;loading&quot;</code>, <code>&quot;loaded&quot;</code>, or <code>&quot;error&quot;</code> (at time of writing, keep in mind this is not a fully stable API yet). By checking for <code>FontFace.status === &quot;error&quot;</code>, we can use the FontFace constructor as an input validator, like so:</p>
+
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">window.testFont = <span style="font-weight:bold">new</span> FontFace(<span style="font-style:italic">&#34;testFont&#34;</span>, buffer);
+<span style="font-weight:bold">if</span> (window.testFont.status === <span style="font-style:italic">&#34;error&#34;</span>) {
+	<span style="font-style:italic">// Bad font file or unsupported format, restart.
+</span><span style="font-style:italic"></span>    icon.setAttribute(<span style="font-style:italic">&#34;src&#34;</span>, <span style="font-style:italic">&#34;assets/no.svg&#34;</span>);
+    setTimeout(initApp, 1000);
+} <span style="font-weight:bold">else</span> {
+    <span style="font-style:italic">// window.testFont is valid and ready to be loaded.
+</span><span style="font-style:italic"></span>}
+</code></pre></td></tr></table>
+</div>
+</div>
+
+<p>Now that we&rsquo;re sure everything is all right, we can load the font using the <a href="https://developer.mozilla.org/en-US/docs/Web/API/FontFaceSet">FontFaceSet API</a>. The document-wide FontFaceSet can be accessed with <code>document.fonts</code>.</p>
+
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="font-style:italic">// window.testFont is valid and ready to be loaded.
+</span><span style="font-style:italic"></span>document.fonts.add(window.testFont);
+
+<span style="font-style:italic">/* FontFaceSet.load() requires a font size, but it is arbitrary at
+</span><span style="font-style:italic">the moment, the &#34;12px&#34; value doesn&#39;t have any importance. */</span>
+document.fonts.load(<span style="font-style:italic">&#34;12px testFont&#34;</span>);
+</code></pre></td></tr></table>
+</div>
+</div>
+
+<p>And voilà! The dropped file has been validated and loaded into the document&rsquo;s font set. We can use it in CSS as <code>testFont</code>.</p>
+
+<h2 id="02-getting-the-required-data-for-the-tests">#02: Getting the required data for the tests</h2>
+
+<p align="center">
+    <img alt="Distribution of the most used writing systems on a world map" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/World_alphabets_%26_writing_systems.svg/1024px-World_alphabets_%26_writing_systems.svg.png"/>
+</p>
+
+<p><em>Geographic distribution of the most used writing systems, source: <a href="https://commons.wikimedia.org/wiki/File:World_alphabets_%26_writing_systems.svg">wikipedia</a></em></p>
+
+<p>Before actually testing anything, I first needed data on which writing systems were used in the world, where were they used, and the range of <a href="https://en.wikipedia.org/wiki/Unicode">Unicode characters</a> needed for each one of them. I couldn&rsquo;t find a compiled list that referenced the unicode ranges needed to write in modern scripts by family, so I spent a few hours making my own by looking at the map above and lists of Unicode blocks used by each major writing system, like <a href="https://en.wikipedia.org/wiki/Latin_script_in_Unicode">this one for the Latin scripts</a>.</p>
+
+<p>The end result is JSON data listing all the character ranges needed to write modern text in each of the world&rsquo;s most commonly used writing systems:</p>
+
+<p><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="font-weight:bold">&#34;latin&#34;</span>: [
+        [0, 127],
+        [128, 255],
+        [256, 383],
+        [384, 591],
+        [7680, 7935]
+    ],
+    <span style="font-weight:bold">&#34;cyrillic&#34;</span>: [
+        [1024, 1279],
+        [1280, 1327],
+        [7467, 7544],
+        [65070, 65071]
+    ],
+    <span style="">...others</span>
+}</code></pre></div>
+<em>Note: you may notice that currently non-displayable characters like ASCII control chars are not excluded from the lists; hopefully someday I&rsquo;ll take the time to filter those out.</em></p>
+
+<h2 id="03-testing-the-font">#03: Testing the font</h2>
+
+<p>Back to the script. We have a font to test and the code of the characters to test it with; now how do we find out which ones are supported and which ones aren&rsquo;t? Well, try to write them, of course!</p>
+
+<p>But there&rsquo;s one small problem: web browsers use a cascading fallback font system, which means that if the selected font can&rsquo;t display a character, the next choosen font is used, and so on until a font is found - either in the font&rsquo;s custom page or in the system&rsquo;s font set - that can display the problematic char. If absolutely no suitable font is found, a &ldquo;?&rdquo; symbol is displayed instead.</p>
+
+<p>To prevent the browser from displaying characters not supported by our test font, Mr.Worldwide uses <a href="https://github.com/adobe-fonts/adobe-blank">Adobe Blank</a>. Blank is a special font made for testing purposes that maps every character to a blank, zero-width one. By setting it as the secondary font for our testing node, we can make sure that trying to write any non-supported character will make said node have a <code>0px</code> width.</p>
+
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="font-weight:bold">p</span>#<span style="font-weight:bold">tester</span> {
+	<span style="font-weight:bold">font-family</span>: testFont, Blank;
+}</code></pre></div>
+
+<p>And here&rsquo;s the actual testing:</p>
+
+<p><div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="font-style:italic">// Get an empty &#39;p&#39; element to test our font.
+</span><span style="font-style:italic"></span><span style="font-weight:bold">var</span> tester = document.getElementById(<span style="font-style:italic">&#34;tester&#34;</span>);
+
+<span style="font-style:italic">/* We linked the Blank font in our HTML, but since no text uses
+</span><span style="font-style:italic">it on the page, the browser may not have loaded it yet. */</span>
+document.fonts.load(<span style="font-style:italic">&#34;12px Blank&#34;</span>).then(() =&gt; {
+	
+    <span style="font-style:italic">// We&#39;ll use a global object to store the results of our tests.
+</span><span style="font-style:italic"></span>    window.testFontUnicodeCoverage = {};
+
+	<span style="font-style:italic">/* window.scripts is the object containing the JSON data
+</span><span style="font-style:italic">    listing unicode ranges by scripts (writing systems), the
+</span><span style="font-style:italic">    following code allows us to loop through each script. */</span>
+    Object.keys(window.scripts).forEach(scriptName =&gt; {
+    	
+        <span style="font-style:italic">// Will store the number of succesfully rendered glyphs.
+</span><span style="font-style:italic"></span>        <span style="font-weight:bold">let</span> success = 0;
+        <span style="font-style:italic">// Will store the total number of glyphs for this script.
+</span><span style="font-style:italic"></span>        <span style="font-weight:bold">let</span> divisor = 0;
+
+        <span style="font-style:italic">// Loop through each unicode range used in this script:
+</span><span style="font-style:italic"></span>        window.scripts[scriptName].forEach(range =&gt; {
+        	
+            <span style="font-style:italic">/* Add the total number of glyphs in this range
+</span><span style="font-style:italic">            to our divisor. */</span>
+            divisor = divisor + (range[1] - range[0]);
+
+            <span style="font-style:italic">// Loop through each individual unicode character:
+</span><span style="font-style:italic"></span>            <span style="font-weight:bold">for</span> (<span style="font-weight:bold">let</span> i = range[0]; i &lt;= range[1]; i++) {
+
+            	<span style="font-style:italic">// Write the character to our test node.
+</span><span style="font-style:italic"></span>                tester.textContent = String.fromCodePoint(i);
+
+                <span style="font-style:italic">/* If a character is rendered, increment the
+</span><span style="font-style:italic">                number of successfully rendered glyphs. */</span>
+                <span style="font-weight:bold">if</span> (tester.offsetWidth &gt; 0) {
+                    success++;
+                }
+             }
+        });
+
+		<span style="font-style:italic">/* Calculate &amp; store a float representing the percentage
+</span><span style="font-style:italic">        of this writing system that is supported by our
+</span><span style="font-style:italic">        test font. */</span>
+        <span style="font-weight:bold">let</span> successRate = success <span style="">/ divisor;</span>
+        window.testFontUnicodeCoverage[s] = successRate;
+    });
+});
+</code></pre></td></tr></table>
+</div>
+</div>
+<em>You might be interested in learning more about <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys</a>, which is used to loop through the values of an object, and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCodePoint">String.fromCodePoint</a>, which allows creating a string from unicode character codes in hexa- or decimal format.</em></p>
+
+<p>The test results are stored in a global object <code>window.testFontUnicodeCoverage</code> that gives the percentage of script support for each writing system, like so:</p>
+
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+	<span style="font-weight:bold">&#34;arabic&#34;</span>: 0.17299820954677847,
+    <span style="font-weight:bold">&#34;armenian&#34;</span>: 0,
+    <span style="font-weight:bold">&#34;brahmic&#34;</span>: 0,
+    <span style="font-weight:bold">&#34;canadianSyllabic&#34;</span>: 0,
+    <span style="font-weight:bold">&#34;cjk&#34;</span>: 0,
+    <span style="font-weight:bold">&#34;cyrillic&#34;</span>: 0.5146058024865757,
+    <span style="font-weight:bold">&#34;ethiopic&#34;</span>: 0,
+    <span style="font-weight:bold">&#34;gana+kana&#34;</span>: 0,
+    <span style="font-weight:bold">&#34;georgian&#34;</span>: 0,
+    <span style="font-weight:bold">&#34;greek&#34;</span>: 0.7601562335069727,
+    <span style="font-weight:bold">&#34;hangul&#34;</span>: 0,
+    <span style="font-weight:bold">&#34;hebrew&#34;</span>: 0.8966550340600317,
+    <span style="font-weight:bold">&#34;latin&#34;</span>: 0.9126691936883361,
+    <span style="font-weight:bold">&#34;thaana&#34;</span>: 0.17299820954677847
+}</code></pre></div>
+
+<h2 id="03-displaying-results">#03: Displaying results</h2>
+
+<p align="center">
+    <img alt="Example result graph" src="https://squared.codebrew.fr/img/mr-worldwide/example-result.png"/>
+</p>
+
+<p>To display the results on a world map, I made an <code>svg</code> element representing a world map with countries outlined and <code>class</code> attributes on each country with the name of the most used writing system there.</p>
+
+<p>The JS script can then apply the right colors simply by appending a style element with calculated opacities:</p>
+
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="font-weight:bold">let</span> style = document.createElement(<span style="font-style:italic">&#34;style&#34;</span>);
+style.innerHTML = <span style="font-style:italic">`
+</span><span style="font-style:italic">	.latin {
+</span><span style="font-style:italic">    	fill: #0076ff;
+</span><span style="font-style:italic">        fill-opacity: </span><span style="font-weight:bold;font-style:italic">${</span>window.testFontUnicodeCoverage.latin<span style="font-weight:bold;font-style:italic">}</span><span style="font-style:italic">;
+</span><span style="font-style:italic">    }
+</span><span style="font-style:italic">    (...)
+</span><span style="font-style:italic">`</span>;
+
+document.body.appendChild(style);
+</code></pre></td></tr></table>
+</div>
+</div>
+
+<p>The color scale at the bottom was made simply with a CSS <code>linear-gradient</code> background in a <code>span</code> element.</p>
+
+<p>And that&rsquo;s it! You can <a href="https://gitsquared.github.io/mrworldwide">test the tool</a> or <a href="https://github.com/GitSquared/mrworldwide">look at the code on GitHub</a>.</p>
+
+<p><strong><em>Thanks for reading and hope you enjoyed this. I&rsquo;m looking forward to publish more tech write-ups like this, notably about <a href="https://github.com/GitSquared/edex-ui">eDEX-UI</a>, since I got a few requests for that one.</em></strong></p>
+
+<hr />
+
+<p>* <em>did you know that EDEX is the commercial name of an injection against erectile dysfunction? No? Well me neither. -facepalm-</em></p>
+
+      </div>
+
+      <footer>
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+      <p>&#34;This quote was taken out of context.&#34; - XKCD</p>
+    
+     © 2019
+    
+       · 
+      Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>
