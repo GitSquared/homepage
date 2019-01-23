@@ -116,7 +116,7 @@
       <div>
         
 
-<p>To help with a little investigation of mine regarding <a href="https://github.com/GitSquared/edex-ui/issues/370">international languages support in eDEX-UI</a>, I wanted to analyze a font file to see how many alphabets and languages it could support.</p>
+<p>To help with a little investigation of mine regarding international languages support in <a href="https://github.com/GitSquared/edex-ui">eDEX-UI</a>, I wanted to analyze a font file to see how many alphabets and languages it could support.</p>
 
 <p>After a bit of <a href="https://duckduckgo.com">ducking</a> around, I couldn&rsquo;t find an online tool that did this properly, so I built my own: <strong><a href="https://github.com/GitSquared/mrworldwide">Mr. Worldwide</a></strong>.</p>
 
@@ -124,13 +124,13 @@
     <img alt="Mr.Worldwide demo" style="box-shadow: 2px 2px 5px rgba(0,0,0,0.3)" src="https://squared.codebrew.fr/img/mr-worldwide/demo.gif"/>
 </p>
 
-<p>Mr.Worldwide analyzes the writing systems supported by a font (support of specific unicode ranges corresponding to regional languages) and display the results in a way that is easy to understand at a glance (a colored world map).</p>
+<p>Mr.Worldwide analyzes the writing systems supported by a font (support of specific unicode ranges corresponding to regional languages) and displays the results in a way that is easy to understand at a glance - a colored world map.</p>
 
 <p>The name is of course a reference to the 2011 <a href="https://knowyourmeme.com/memes/mr-worldwide">meme</a> - I take great pride in gaving any piece of software I build the shittiest name possible*. The tool itself is only one, sort-of-lengthy, browser-side javascript file that uses a lot of bleeding edge web APIs like <a href="https://developer.mozilla.org/en-US/docs/Web/API/FontFaceSet">FontFaceSet</a> for dynamically loading fonts in the webpage.</p>
 
 <p>The overall look of the interface is <del>shamelessly stolen</del> inspired from <a href="https://iad.zeit.co">Zeit.co&rsquo;s datacenter ping tests</a> - I&rsquo;m a real fan of their modern, high contrast designs on their websites and panels, and wanted to try and borrow a bit from that. Which turned out to not just be &ldquo;a bit&rdquo; but whatever, at least it doesn&rsquo;t look (too) ugly.</p>
 
-<p>Let&rsquo;s dive in into the code, shall we?</p>
+<p>Let&rsquo;s dive into the code, shall we?</p>
 
 <h2 id="01-loading-a-custom-font-from-a-file-with-drag-drop-for-the-wow-factor">#01: Loading a custom font from a file, with drag &amp; drop for the wow factor</h2>
 
@@ -480,7 +480,7 @@ document.fonts.load(<span style="font-style:italic">&#34;12px Blank&#34;</span>)
 
 <p>To display the results on a world map, I made an <code>svg</code> element representing a world map with countries outlined and <code>class</code> attributes on each country with the name of the most used writing system there.</p>
 
-<p>The JS script can then apply the right colors simply by appending a style element with calculated opacities:</p>
+<p>The JS script can then apply the right colors simply by appending a style element with calculated <code>opacity</code> values:</p>
 
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">

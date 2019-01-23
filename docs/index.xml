@@ -19,7 +19,7 @@
       <guid>https://squared.codebrew.fr/posts/mr-worldwide/</guid>
       <description>To help with a little investigation of mine regarding international languages support in eDEX-UI, I wanted to analyze a font file to see how many alphabets and languages it could support.
 After a bit of ducking around, I couldn&amp;rsquo;t find an online tool that did this properly, so I built my own: Mr. Worldwide.
-Mr.Worldwide analyzes the writing systems supported by a font (support of specific unicode ranges corresponding to regional languages) and display the results in a way that is easy to understand at a glance (a colored world map).</description>
+Mr.Worldwide analyzes the writing systems supported by a font (support of specific unicode ranges corresponding to regional languages) and displays the results in a way that is easy to understand at a glance - a colored world map.</description>
     </item>
     
     <item>

@@ -5,7 +5,7 @@ title = "Introducing Mr.Worldwide"
 slug = "mr-worldwide"
 +++
 
-To help with a little investigation of mine regarding [international languages support in eDEX-UI](https://github.com/GitSquared/edex-ui/issues/370), I wanted to analyze a font file to see how many alphabets and languages it could support.
+To help with a little investigation of mine regarding international languages support in [eDEX-UI](https://github.com/GitSquared/edex-ui), I wanted to analyze a font file to see how many alphabets and languages it could support.
 
 After a bit of [ducking](https://duckduckgo.com) around, I couldn't find an online tool that did this properly, so I built my own: **[Mr. Worldwide](https://github.com/GitSquared/mrworldwide)**.
 
@@ -13,13 +13,13 @@ After a bit of [ducking](https://duckduckgo.com) around, I couldn't find an onli
 	<img alt="Mr.Worldwide demo" style="box-shadow: 2px 2px 5px rgba(0,0,0,0.3)" src="/img/mr-worldwide/demo.gif"/>
 </p>
 
-Mr.Worldwide analyzes the writing systems supported by a font (support of specific unicode ranges corresponding to regional languages) and display the results in a way that is easy to understand at a glance (a colored world map).
+Mr.Worldwide analyzes the writing systems supported by a font (support of specific unicode ranges corresponding to regional languages) and displays the results in a way that is easy to understand at a glance - a colored world map.
 
 The name is of course a reference to the 2011 [meme](https://knowyourmeme.com/memes/mr-worldwide) - I take great pride in gaving any piece of software I build the shittiest name possible\*. The tool itself is only one, sort-of-lengthy, browser-side javascript file that uses a lot of bleeding edge web APIs like [FontFaceSet](https://developer.mozilla.org/en-US/docs/Web/API/FontFaceSet) for dynamically loading fonts in the webpage.
 
 The overall look of the interface is ~~shamelessly stolen~~ inspired from [Zeit.co's datacenter ping tests](https://iad.zeit.co) - I'm a real fan of their modern, high contrast designs on their websites and panels, and wanted to try and borrow a bit from that. Which turned out to not just be "a bit" but whatever, at least it doesn't look (too) ugly.
 
-Let's dive in into the code, shall we?
+Let's dive into the code, shall we?
 ## #01: Loading a custom font from a file, with drag & drop for the wow factor
 
 The first step in the tool's workflow is to get a web font file from the user and load it up into the browser so it can be tested.
@@ -238,7 +238,7 @@ The test results are stored in a global object `window.testFontUnicodeCoverage` 
 
 To display the results on a world map, I made an `svg` element representing a world map with countries outlined and `class` attributes on each country with the name of the most used writing system there.
 
-The JS script can then apply the right colors simply by appending a style element with calculated opacities:
+The JS script can then apply the right colors simply by appending a style element with calculated `opacity` values:
 
 {{< highlight js "linenos=table">}}
 let style = document.createElement("style");
