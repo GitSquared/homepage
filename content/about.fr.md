@@ -10,6 +10,6 @@ Je fais aussi des petits enregistrements avec ma guitare de temps en temps, mais
 
 ## Contact
 
-Pour des demandes professionnelles, merci de me contacter par email à [`g.saillard@codebrew.fr`](mailto:g.saillard@codebrew.fr).
+Pour des demandes professionnelles, merci de me contacter par email à [`gabriel@saillard.dev`](mailto:gabriel@saillard.dev).
 
 Dans d'autres cas, vous pouvez me joindre par email à [`squared@codebrew.fr`](mailto:squared@codebrew.fr) ou me trouver sur les réseaux sociaux.

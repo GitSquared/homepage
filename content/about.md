@@ -10,6 +10,6 @@ I also make tiny bits of music with my guitar sometimes, but that's probably not
 
 ## Contact
 
-For professional inquiries, please contact me via email at [`g.saillard@codebrew.fr`](mailto:g.saillard@codebrew.fr).
+For professional inquiries, please contact me via email at [`gabriel@saillard.dev`](mailto:gabriel@saillard.dev).
 
 Otherwise, please use the [`squared@codebrew.fr`](mailto:squared@codebrew.fr) email address or reach me through social media.
