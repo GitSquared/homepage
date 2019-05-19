@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Gaby - Squared</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 20 Jan 2019 18:50:33 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 19 May 2019 19:20:53 +0200</lastBuildDate>
     
 	<atom:link href="https://squared.codebrew.fr/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Disclosure: Remote Code Injection in eDEX-UI 2.2.1 and below</title>
+      <link>https://squared.codebrew.fr/posts/edex-injection-vuln/</link>
+      <pubDate>Sun, 19 May 2019 19:20:53 +0200</pubDate>
+      
+      <guid>https://squared.codebrew.fr/posts/edex-injection-vuln/</guid>
+      <description>On April 30th, 2019, a vulnerability was found in the source code of eDEX-UI.
+An incorrectly escaped API response in the netstat module, which pings a remote server to get geoip information about the current network, could lead to remote code injection in the renderer process (which is Node-enabled).
+A fix for this vulnerability was pushed to master as soon as it was discovered, but a new version wasn&amp;rsquo;t released immediately.</description>
+    </item>
     
     <item>
       <title>Introducing Mr.Worldwide</title>
