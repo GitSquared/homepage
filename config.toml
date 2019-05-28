@@ -36,7 +36,7 @@ disable_comments = true
         languagename = "English"
 
         [languages.en.params]
-            info = "Industrial Engineering Student & Creative Hobbyist Developer"
+            info = "Student & Creative Hobbyist Developer"
             description = "Gaby, also known as Squared, personal website"
             keywords = "blog,developer,personal"
             footercontent = "\"This quote was taken out of context.\" - XKCD"
@@ -55,7 +55,7 @@ disable_comments = true
         languagename = "Français"
 
         [languages.fr.params]
-            info = "Étudiant en Conception Industrielle & Développeur Créatif Amateur"
+            info = "Étudiant & Développeur Créatif"
             description = "Gaby, aussi connu sous le pseudonyme de Squared, site personnel"
             keywords = "blog,developpeur,personnel"
             footercontent = "Combien faut-il de nains pour creuser en 2 jours un tunnel de 28m dans du granite?"
